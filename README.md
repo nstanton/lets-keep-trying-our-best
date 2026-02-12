@@ -1,4 +1,4 @@
-# FPL Stats - Let's Keep Trying Our Best!
+# FPL Stats - Let's Keep Trying Our Best! 
 
 A static website tracking Fantasy Premier League mini-league **79657** ("Let's Keep Trying Our Best!"). Built with Next.js, TypeScript, and Tailwind CSS, deployed via GitHub Pages.
 
