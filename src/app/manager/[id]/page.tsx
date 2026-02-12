@@ -1,8 +1,18 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { getManagerData, getAllManagerIds, getLeagueData } from "@/lib/data";
+import {
+  getManagerData,
+  getAllManagerIds,
+  getBootstrapData,
+  getLeagueData,
+} from "@/lib/data";
 import WeeklyChart from "@/components/WeeklyChart";
 import TransferLog from "@/components/TransferLog";
+import TeamBreakdownTable from "@/components/TeamBreakdownTable";
+import {
+  buildOtherManagerRowsForManager,
+  buildManagerTeamBreakdownRows,
+} from "@/lib/team-breakdown";
 
 export async function generateStaticParams() {
   const ids = await getAllManagerIds();
@@ -41,16 +51,19 @@ export async function generateMetadata({
 export default async function ManagerPage({ params }: PageProps) {
   const { id } = await params;
   const managerId = parseInt(id, 10);
-  const [managerData, leagueData] = await Promise.all([
+  const [managerData, leagueData, bootstrapData, allManagerIds] = await Promise.all([
     getManagerData(managerId),
     getLeagueData(),
+    getBootstrapData(),
+    getAllManagerIds(),
   ]);
+  const leagueResults = leagueData?.standings.results ?? [];
 
-  const standing = leagueData?.standings.results.find(
+  const standing = leagueResults.find(
     (r) => r.entry === managerId
   );
 
-  if (!managerData || !standing) {
+  if (!managerData || !standing || !bootstrapData) {
     return (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Link
@@ -74,6 +87,37 @@ export default async function ManagerPage({ params }: PageProps) {
   const history = managerData.current;
   const chips = managerData.chips;
   const latestGw = history.length > 0 ? history[history.length - 1] : null;
+  const managerBreakdownRows = buildManagerTeamBreakdownRows(
+    managerData.picks_by_event,
+    bootstrapData.elements ?? [],
+    bootstrapData.teams ?? []
+  );
+
+  const allManagersForComparison = await Promise.all(
+    allManagerIds.map(async (entry) => ({
+      managerId: entry,
+      managerData: await getManagerData(entry),
+    }))
+  );
+  const leagueComparisonRows = allManagersForComparison.map((manager) => ({
+    managerId: manager.managerId,
+    rows: buildManagerTeamBreakdownRows(
+      manager.managerData?.picks_by_event,
+      bootstrapData.elements ?? [],
+      bootstrapData.teams ?? []
+    ),
+  }));
+  const managerMetaById = Object.fromEntries(
+    leagueResults.map((result) => [
+      result.entry,
+      { entryName: result.entry_name, playerName: result.player_name },
+    ])
+  );
+  const otherManagersByElementId = buildOtherManagerRowsForManager(
+    leagueComparisonRows,
+    managerId,
+    managerMetaById
+  );
 
   const bestGw =
     history.length > 0
@@ -171,6 +215,18 @@ export default async function ManagerPage({ params }: PageProps) {
           <span className="inline-block w-3 h-3 rounded-sm bg-fpl-light-purple mr-1 ml-3 align-middle"></span>{" "}
           Total (line)
         </p>
+      </div>
+
+      {/* Team Breakdown Table */}
+      <div className="mb-8">
+        <h2 className="text-xl font-bold text-white mb-2">Team Breakdown</h2>
+        <p className="text-sm text-gray-400 mb-3">
+          Includes every player this manager has owned at any point in the season.
+        </p>
+        <TeamBreakdownTable
+          rows={managerBreakdownRows}
+          otherManagersByElementId={otherManagersByElementId}
+        />
       </div>
 
       {/* Gameweek History Table */}
