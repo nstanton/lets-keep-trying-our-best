@@ -141,8 +141,21 @@ export interface ManagerPickWithPoints extends EntryPick {
 
 export type ManagerPicksByEvent = Record<number, ManagerPickWithPoints[]>;
 
+export interface ManagerTransfer {
+  element_in: number;
+  element_out: number;
+  element_in_cost: number;
+  element_out_cost: number;
+  entry: number;
+  event: number;
+  time: string;
+}
+
+export type ManagerTransfersResponse = ManagerTransfer[];
+
 export interface ManagerHistoryWithPicks extends ManagerHistoryResponse {
   picks_by_event: ManagerPicksByEvent;
+  transfers: ManagerTransfer[];
 }
 
 // Manager Entry response (from /api/entry/{id}/)

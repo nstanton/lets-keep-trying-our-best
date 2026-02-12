@@ -8,6 +8,8 @@ import PointsLeagueChart from "@/components/PointsLeagueChart";
 import WeeklyPointsLeagueChart from "@/components/WeeklyPointsLeagueChart";
 import GlobalRankChart from "@/components/GlobalRankChart";
 import { computeSeasonAnomalies } from "@/lib/anomalies";
+import { computeLeagueInsights } from "@/lib/league-insights";
+import LeagueInsightsTables from "@/components/LeagueInsightsTables";
 
 export default async function Home() {
   const [managers, currentGw, bootstrap] = await Promise.all([
@@ -20,6 +22,7 @@ export default async function Home() {
   const totalGameweeks = Math.max(finishedGameweeks, currentGw, 1);
   const totalManagers = managers.length;
   const anomalies = computeSeasonAnomalies(managers, bootstrap, currentGw);
+  const leagueInsights = computeLeagueInsights(managers, bootstrap, currentGw);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -144,6 +147,9 @@ export default async function Home() {
           </div>
         </div>
       )}
+
+      {/* Advanced League Analytics */}
+      {managers.length > 0 && <LeagueInsightsTables insights={leagueInsights} />}
 
       {/* Points Over Time Chart */}
       {managers.length > 0 && (

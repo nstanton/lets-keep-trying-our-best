@@ -9,10 +9,12 @@ import {
 import WeeklyChart from "@/components/WeeklyChart";
 import TransferLog from "@/components/TransferLog";
 import TeamBreakdownTable from "@/components/TeamBreakdownTable";
+import ManagerInsightsPanel from "@/components/ManagerInsightsPanel";
 import {
   buildOtherManagerRowsForManager,
   buildManagerTeamBreakdownRows,
 } from "@/lib/team-breakdown";
+import { computeLeagueInsights } from "@/lib/league-insights";
 
 export async function generateStaticParams() {
   const ids = await getAllManagerIds();
@@ -98,6 +100,44 @@ export default async function ManagerPage({ params }: PageProps) {
       managerId: entry,
       managerData: await getManagerData(entry),
     }))
+  );
+  const managerDataById = new Map(
+    allManagersForComparison.map((manager) => [manager.managerId, manager.managerData])
+  );
+  const processedManagers = leagueResults
+    .map((result) => {
+      const fullData = managerDataById.get(result.entry);
+      return {
+        entry: result.entry,
+        player_name: result.player_name,
+        entry_name: result.entry_name,
+        rank: result.rank,
+        last_rank: result.last_rank,
+        total: result.total,
+        event_total: result.event_total,
+        history: fullData?.current ?? [],
+        chips: fullData?.chips ?? [],
+        picks_by_event: fullData?.picks_by_event,
+        transfers: fullData?.transfers,
+      };
+    })
+    .sort((a, b) => a.rank - b.rank);
+  const currentEvent = bootstrapData.events.find((event) => event.is_current);
+  const finishedEvents = bootstrapData.events.filter((event) => event.finished);
+  const latestFinished =
+    finishedEvents.length > 0
+      ? finishedEvents[finishedEvents.length - 1]
+      : null;
+  const currentGw = currentEvent?.id ?? latestFinished?.id ?? 1;
+  const leagueInsights = computeLeagueInsights(
+    processedManagers,
+    bootstrapData,
+    currentGw
+  );
+  const managerInsight =
+    leagueInsights.managers.find((result) => result.entry === managerId) ?? null;
+  const managerChipEvents = leagueInsights.chipEvents.filter(
+    (event) => event.entry === managerId
   );
   const leagueComparisonRows = allManagersForComparison.map((manager) => ({
     managerId: manager.managerId,
@@ -202,6 +242,14 @@ export default async function ManagerPage({ params }: PageProps) {
           </div>
         </div>
       </div>
+
+      {/* Advanced Manager Analytics */}
+      {managerInsight && (
+        <ManagerInsightsPanel
+          insight={managerInsight}
+          chipEvents={managerChipEvents}
+        />
+      )}
 
       {/* Weekly Points Chart */}
       <div className="mb-8">
