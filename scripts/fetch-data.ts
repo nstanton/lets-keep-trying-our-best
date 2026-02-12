@@ -3,9 +3,13 @@ import path from "node:path";
 
 import type {
   BootstrapResponse,
+  EventLiveResponse,
+  EventPicksResponse,
   LeagueResponse,
   LeagueStandingResult,
   ManagerHistoryResponse,
+  ManagerHistoryWithPicks,
+  ManagerPickWithPoints,
 } from "./types.js";
 
 // Constants
@@ -45,6 +49,34 @@ function delay(ms: number): Promise<void> {
 // Helper: ensure directory exists
 async function ensureDir(dir: string): Promise<void> {
   await fs.mkdir(dir, { recursive: true });
+}
+
+async function getLivePointsMapForEvent(
+  event: number,
+  cache: Map<number, Map<number, number>>
+): Promise<Map<number, number>> {
+  const cached = cache.get(event);
+  if (cached) return cached;
+
+  try {
+    const liveData = await fetchWithRetry<EventLiveResponse>(
+      `${API_BASE}/event/${event}/live/`
+    );
+    const pointsMap = new Map<number, number>();
+    for (const element of liveData.elements) {
+      pointsMap.set(element.id, element.stats.total_points);
+    }
+    cache.set(event, pointsMap);
+    return pointsMap;
+  } catch (error) {
+    console.warn(
+      `Could not fetch live points for GW${event}. Continuing with null points.`,
+      error
+    );
+    const emptyMap = new Map<number, number>();
+    cache.set(event, emptyMap);
+    return emptyMap;
+  }
 }
 
 // Main data fetching function
@@ -104,18 +136,59 @@ async function fetchData(): Promise<void> {
   console.log(`Fetched league standings: ${allResults.length} managers`);
 
   // 3. Fetch history for each manager
+  const livePointsCache = new Map<number, Map<number, number>>();
+
   for (const manager of allResults) {
     await delay(DELAY_MS);
 
     const history = await fetchWithRetry<ManagerHistoryResponse>(
       `${API_BASE}/entry/${manager.entry}/history/`
     );
+
+    const picksByEvent: Record<number, ManagerPickWithPoints[]> = {};
+    const managerGameweeks = new Set(history.current.map((gw) => gw.event));
+    if (currentEvent) {
+      managerGameweeks.add(currentEvent.id);
+    }
+
+    for (const gameweek of managerGameweeks) {
+      await delay(DELAY_MS);
+
+      try {
+        const [picksResponse, livePointsMap] = await Promise.all([
+          fetchWithRetry<EventPicksResponse>(
+            `${API_BASE}/entry/${manager.entry}/event/${gameweek}/picks/`
+          ),
+          getLivePointsMapForEvent(gameweek, livePointsCache),
+        ]);
+
+        picksByEvent[gameweek] = picksResponse.picks.map((pick) => ({
+          element: pick.element,
+          position: pick.position,
+          multiplier: pick.multiplier,
+          is_captain: pick.is_captain,
+          is_vice_captain: pick.is_vice_captain,
+          points: livePointsMap.get(pick.element) ?? null,
+        }));
+      } catch (error) {
+        console.warn(
+          `Could not fetch picks for manager ${manager.entry} in GW${gameweek}.`,
+          error
+        );
+      }
+    }
+
+    const managerData: ManagerHistoryWithPicks = {
+      ...history,
+      picks_by_event: picksByEvent,
+    };
+
     await fs.writeFile(
       path.join(MANAGERS_DIR, `${manager.entry}.json`),
-      JSON.stringify(history, null, 2)
+      JSON.stringify(managerData, null, 2)
     );
     console.log(
-      `Fetched history for ${manager.player_name} (${manager.entry})`
+      `Fetched history and picks for ${manager.player_name} (${manager.entry})`
     );
   }
 

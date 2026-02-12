@@ -24,9 +24,19 @@ export interface BootstrapTeam {
   code: number;
 }
 
+export interface BootstrapElement {
+  id: number;
+  web_name: string;
+  team: number;
+  element_type: number;
+  first_name: string;
+  second_name: string;
+}
+
 export interface BootstrapResponse {
   events: BootstrapEvent[];
   teams: BootstrapTeam[];
+  elements: BootstrapElement[];
   total_players: number;
 }
 
@@ -97,6 +107,42 @@ export interface ManagerHistoryResponse {
   current: GameweekHistory[];
   past: PastSeason[];
   chips: ChipUsage[];
+}
+
+// Picks response (from /api/entry/{id}/event/{gw}/picks/)
+export interface EntryPick {
+  element: number;
+  position: number;
+  multiplier: number;
+  is_captain: boolean;
+  is_vice_captain: boolean;
+}
+
+export interface EventPicksResponse {
+  active_chip: string | null;
+  picks: EntryPick[];
+}
+
+// Live response (from /api/event/{gw}/live/)
+export interface EventLiveElement {
+  id: number;
+  stats: {
+    total_points: number;
+  };
+}
+
+export interface EventLiveResponse {
+  elements: EventLiveElement[];
+}
+
+export interface ManagerPickWithPoints extends EntryPick {
+  points: number | null;
+}
+
+export type ManagerPicksByEvent = Record<number, ManagerPickWithPoints[]>;
+
+export interface ManagerHistoryWithPicks extends ManagerHistoryResponse {
+  picks_by_event: ManagerPicksByEvent;
 }
 
 // Manager Entry response (from /api/entry/{id}/)

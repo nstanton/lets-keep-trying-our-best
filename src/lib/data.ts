@@ -75,6 +75,7 @@ export async function getProcessedManagers(): Promise<ProcessedManager[]> {
       event_total: standing.event_total,
       history: managerData?.current ?? [],
       chips: managerData?.chips ?? [],
+      picks_by_event: managerData?.picks_by_event,
     });
   }
 

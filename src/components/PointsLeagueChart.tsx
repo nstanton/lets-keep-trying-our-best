@@ -40,7 +40,7 @@ export default function PointsLeagueChart({
 }: PointsLeagueChartProps) {
   const entryToName = new Map<number, string>();
   managers.forEach((m) => {
-    entryToName.set(m.entry, m.player_name || m.entry_name);
+    entryToName.set(m.entry, m.entry_name || m.player_name);
   });
 
   const data = Array.from({ length: totalGameweeks }, (_, i) => {
@@ -89,7 +89,7 @@ export default function PointsLeagueChart({
         const pts = d[String(m.entry)];
         const chip = getChipAtGw(m.entry, d.gw);
         return {
-          name: entryToName.get(m.entry) ?? m.entry_name,
+          name: entryToName.get(m.entry) ?? m.entry_name ?? m.player_name,
           pts,
           chip,
         };
@@ -136,7 +136,7 @@ export default function PointsLeagueChart({
               href={`/manager/${m.entry}`}
               className="text-xs text-gray-300 hover:text-fpl-green transition-colors"
             >
-              {m.player_name || m.entry_name}
+              {m.entry_name || m.player_name}
             </Link>
           </li>
         ))}
@@ -193,7 +193,7 @@ export default function PointsLeagueChart({
               key={m.entry}
               type="monotone"
               dataKey={String(m.entry)}
-              name={m.player_name || m.entry_name}
+              name={m.entry_name || m.player_name}
               stroke={CHART_COLORS[i % CHART_COLORS.length]}
               strokeWidth={2}
               dot={(props) => ChipDot(props, m.chips)}

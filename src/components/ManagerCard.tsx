@@ -41,9 +41,9 @@ export default function ManagerCard({
           {/* Manager Info */}
           <div className="flex-1 min-w-0">
             <div className="font-semibold text-white truncate group-hover:text-fpl-green transition-colors">
-              {playerName}
+              {entryName}
             </div>
-            <div className="text-sm text-gray-400 truncate">{entryName}</div>
+            <div className="text-sm text-gray-400 truncate">{playerName}</div>
           </div>
 
           {/* Points */}

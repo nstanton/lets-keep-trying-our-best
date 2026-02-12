@@ -30,10 +30,10 @@ export async function generateMetadata({
 
   return {
     title: standing
-      ? `${standing.player_name} - FPL Stats`
+      ? `${standing.entry_name} - FPL Stats`
       : "Manager - FPL Stats",
     description: standing
-      ? `FPL stats for ${standing.player_name} (${standing.entry_name})`
+      ? `FPL stats for ${standing.entry_name} (${standing.player_name})`
       : "Manager stats",
   };
 }
@@ -103,10 +103,18 @@ export default async function ManagerPage({ params }: PageProps) {
       {/* Manager Header */}
       <div className="mb-8">
         <h1 className="text-3xl sm:text-4xl font-bold text-white mb-1">
-          {standing.player_name}
+          {standing.entry_name}
         </h1>
-        <p className="text-lg text-gray-400">{standing.entry_name}</p>
+        <p className="text-lg text-gray-400">{standing.player_name}</p>
         <div className="h-1 w-24 bg-fpl-green rounded-full mt-3"></div>
+        <div className="mt-4">
+          <Link
+            href={`/manager/${managerId}/picks`}
+            className="inline-flex items-center rounded-lg border border-fpl-cyan/40 bg-fpl-cyan/10 px-3 py-2 text-sm text-fpl-cyan hover:bg-fpl-cyan/20 transition-colors"
+          >
+            View Team Picks by Position
+          </Link>
+        </div>
       </div>
 
       {/* Stats Cards */}

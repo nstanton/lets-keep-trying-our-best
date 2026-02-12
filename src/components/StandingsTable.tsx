@@ -98,7 +98,7 @@ export default function StandingsTable({
                 </th>
                 <th className="px-2 py-3 text-center text-xs font-semibold text-gray-400 uppercase tracking-wider w-8"></th>
                 <th className="px-4 py-3 text-left text-xs font-semibold text-gray-400 uppercase tracking-wider">
-                  Manager
+                  Team
                 </th>
                 <th className="px-4 py-3 text-right text-xs font-semibold text-gray-400 uppercase tracking-wider">
                   GW Pts
@@ -155,10 +155,10 @@ export default function StandingsTable({
                         className="hover:text-fpl-green transition-colors"
                       >
                         <div className="font-medium text-white">
-                          {standing.player_name}
+                          {standing.entry_name}
                         </div>
                         <div className="text-xs text-gray-400">
-                          {standing.entry_name}
+                          {standing.player_name}
                         </div>
                       </a>
                     </td>

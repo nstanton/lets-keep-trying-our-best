@@ -36,10 +36,22 @@ export interface PastSeason {
   rank: number;
 }
 
+export interface ManagerPick {
+  element: number;
+  position: number;
+  multiplier: number;
+  is_captain: boolean;
+  is_vice_captain: boolean;
+  points: number | null;
+}
+
+export type ManagerPicksByEvent = Record<number, ManagerPick[]>;
+
 export interface ManagerData {
   current: GameweekHistory[];
   past: PastSeason[];
   chips: ChipUsage[];
+  picks_by_event?: ManagerPicksByEvent;
 }
 
 export interface LeagueInfo {
@@ -76,9 +88,19 @@ export interface BootstrapTeam {
   code: number;
 }
 
+export interface BootstrapElement {
+  id: number;
+  web_name: string;
+  team: number;
+  element_type: number;
+  first_name: string;
+  second_name: string;
+}
+
 export interface BootstrapData {
   events: BootstrapEvent[];
   teams: BootstrapTeam[];
+  elements: BootstrapElement[];
 }
 
 export interface ProcessedManager {
@@ -91,6 +113,7 @@ export interface ProcessedManager {
   event_total: number;
   history: GameweekHistory[];
   chips: ChipUsage[];
+  picks_by_event?: ManagerPicksByEvent;
 }
 
 export type ChipName = 'wildcard' | '3xc' | 'bboost' | 'freehit';
