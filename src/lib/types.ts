@@ -47,11 +47,22 @@ export interface ManagerPick {
 
 export type ManagerPicksByEvent = Record<number, ManagerPick[]>;
 
+export interface ManagerTransfer {
+  element_in: number;
+  element_out: number;
+  element_in_cost: number;
+  element_out_cost: number;
+  entry: number;
+  event: number;
+  time: string;
+}
+
 export interface ManagerData {
   current: GameweekHistory[];
   past: PastSeason[];
   chips: ChipUsage[];
   picks_by_event?: ManagerPicksByEvent;
+  transfers?: ManagerTransfer[];
 }
 
 export interface LeagueInfo {
@@ -115,6 +126,7 @@ export interface ProcessedManager {
   history: GameweekHistory[];
   chips: ChipUsage[];
   picks_by_event?: ManagerPicksByEvent;
+  transfers?: ManagerTransfer[];
 }
 
 export type ChipName = 'wildcard' | '3xc' | 'bboost' | 'freehit';

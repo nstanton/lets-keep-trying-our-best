@@ -10,6 +10,7 @@ import type {
   ManagerHistoryResponse,
   ManagerHistoryWithPicks,
   ManagerPickWithPoints,
+  ManagerTransfersResponse,
 } from "./types.js";
 
 // Constants
@@ -141,9 +142,22 @@ async function fetchData(): Promise<void> {
   for (const manager of allResults) {
     await delay(DELAY_MS);
 
-    const history = await fetchWithRetry<ManagerHistoryResponse>(
+    const historyPromise = fetchWithRetry<ManagerHistoryResponse>(
       `${API_BASE}/entry/${manager.entry}/history/`
     );
+    const transfersPromise = fetchWithRetry<ManagerTransfersResponse>(
+      `${API_BASE}/entry/${manager.entry}/transfers/`
+    ).catch((error) => {
+      console.warn(
+        `Could not fetch transfers for manager ${manager.entry}. Continuing with empty transfers.`,
+        error
+      );
+      return [] as ManagerTransfersResponse;
+    });
+    const [history, transfers] = await Promise.all([
+      historyPromise,
+      transfersPromise,
+    ]);
 
     const picksByEvent: Record<number, ManagerPickWithPoints[]> = {};
     const managerGameweeks = new Set(history.current.map((gw) => gw.event));
@@ -181,6 +195,7 @@ async function fetchData(): Promise<void> {
     const managerData: ManagerHistoryWithPicks = {
       ...history,
       picks_by_event: picksByEvent,
+      transfers,
     };
 
     await fs.writeFile(
