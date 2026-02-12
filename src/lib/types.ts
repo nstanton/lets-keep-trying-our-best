@@ -108,3 +108,10 @@ export const CHIP_COLORS: Record<string, string> = {
   bboost: 'bg-fpl-green text-fpl-purple',
   freehit: 'bg-fpl-light-purple',
 };
+
+export const CHIP_CHART_COLORS: Record<string, string> = {
+  wildcard: '#e90052',
+  '3xc': '#05f0ff',
+  bboost: '#00ff87',
+  freehit: '#963cff',
+};

@@ -4,6 +4,9 @@ import {
   getBootstrapData,
 } from "@/lib/data";
 import StandingsTable from "@/components/StandingsTable";
+import PointsLeagueChart from "@/components/PointsLeagueChart";
+import WeeklyPointsLeagueChart from "@/components/WeeklyPointsLeagueChart";
+import GlobalRankChart from "@/components/GlobalRankChart";
 
 export default async function Home() {
   const [managers, currentGw, bootstrap] = await Promise.all([
@@ -54,6 +57,43 @@ export default async function Home() {
           <div className="text-xs text-gray-400 mt-1">League Leader</div>
         </div>
       </div>
+
+      {/* Points Over Time Chart */}
+      {managers.length > 0 && (
+        <div className="mb-8">
+          <h2 className="text-xl font-bold text-white mb-4">Points Over Time</h2>
+          <PointsLeagueChart
+            managers={managers}
+            totalGameweeks={Math.max(totalGameweeks, 1)}
+          />
+        </div>
+      )}
+
+      {/* Points Per Gameweek (Diff from Mean) Chart */}
+      {managers.length > 0 && (
+        <div className="mb-8">
+          <h2 className="text-xl font-bold text-white mb-4">
+            Points Per Gameweek (vs League Mean)
+          </h2>
+          <WeeklyPointsLeagueChart
+            managers={managers}
+            totalGameweeks={Math.max(totalGameweeks, 1)}
+          />
+        </div>
+      )}
+
+      {/* Global Rank Over Time Chart */}
+      {managers.length > 0 && (
+        <div className="mb-8">
+          <h2 className="text-xl font-bold text-white mb-4">
+            Global Rank Over Time
+          </h2>
+          <GlobalRankChart
+            managers={managers}
+            totalGameweeks={Math.max(totalGameweeks, 1)}
+          />
+        </div>
+      )}
 
       {/* Standings Table */}
       {managers.length > 0 ? (
