@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import type { ProcessedManager } from "@/lib/types";
 import ChipBadge from "./ChipBadge";
 
@@ -150,7 +151,7 @@ export default function StandingsTable({
                       )}
                     </td>
                     <td className="px-4 py-3">
-                      <a
+                      <Link
                         href={`/manager/${standing.entry}`}
                         className="hover:text-fpl-green transition-colors"
                       >
@@ -160,7 +161,7 @@ export default function StandingsTable({
                         <div className="text-xs text-gray-400">
                           {standing.player_name}
                         </div>
-                      </a>
+                      </Link>
                     </td>
                     <td className="px-4 py-3 text-right font-bold text-fpl-green">
                       {standing.points}
