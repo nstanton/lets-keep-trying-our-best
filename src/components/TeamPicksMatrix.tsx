@@ -122,7 +122,7 @@ export default function TeamPicksMatrix({
 
   const rows = history.map((gw) => {
     const slots = buildEventSlots(picksByEvent?.[gw.event], elementById, teamById);
-    return { event: gw.event, slots };
+    return { event: gw.event, slots, points: gw.points, total_points: gw.total_points };
   });
 
   const legendTeams = Array.from(
@@ -174,7 +174,8 @@ export default function TeamPicksMatrix({
             {rows.map((row, rowIndex) => (
               <tr key={row.event} className="border-t border-white/10">
                 <td className="sticky left-0 z-20 px-3 py-2 bg-fpl-dark-purple text-sm font-semibold text-white border-r border-white/10">
-                  {row.event}
+                  <div>{row.event}</div>
+                  <div className="text-xs font-normal text-fpl-green mt-0.5">{row.points} pts</div>
                 </td>
                 {row.slots.map((slot, slotIndex) => {
                   const teamShortName = slot?.team?.short_name ?? null;
@@ -210,6 +211,11 @@ export default function TeamPicksMatrix({
                         <span className="text-[10px] opacity-90 leading-tight truncate">
                           {slot?.team?.short_name ?? "—"}
                         </span>
+                        {details && details.points !== "—" && (
+                          <span className="text-[10px] font-semibold text-fpl-green mt-0.5" title="GW points">
+                            {details.points} pts
+                          </span>
+                        )}
                         {details && (
                           <div
                             className={`pointer-events-none absolute left-1/2 z-[70] w-56 -translate-x-1/2 rounded-md border border-white/20 bg-fpl-dark-purple/95 p-2 text-xs text-white shadow-xl opacity-0 transition-opacity duration-150 group-hover:opacity-100 ${tooltipPositionClass}`}
