@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --fpl-purple: #37003c;
+  --fpl-dark-purple: #2c003e;
+  --fpl-green: #00ff87;
+  --fpl-pink: #e90052;
+  --fpl-light-purple: #963cff;
+  --fpl-cyan: #05f0ff;
+}
+
+body {
+  @apply bg-fpl-dark-purple text-white min-h-screen;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+}
