@@ -95,6 +95,7 @@ export interface BootstrapElement {
   element_type: number;
   first_name: string;
   second_name: string;
+  total_points: number;
 }
 
 export interface BootstrapData {
