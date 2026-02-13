@@ -352,12 +352,12 @@
     },
     {
       "event": 26,
-      "points": 41,
-      "total_points": 1371,
-      "rank": 6116238,
-      "rank_sort": 6135248,
-      "overall_rank": 3042309,
-      "percentile_rank": 50,
+      "points": 51,
+      "total_points": 1381,
+      "rank": 4654916,
+      "rank_sort": 4675607,
+      "overall_rank": 2976871,
+      "percentile_rank": 40,
       "bank": 2,
       "value": 1006,
       "event_transfers": 2,
@@ -3490,7 +3490,7 @@
         "multiplier": 2,
         "is_captain": true,
         "is_vice_captain": false,
-        "points": 0
+        "points": 3
       },
       {
         "element": 8,
@@ -3498,7 +3498,7 @@
         "multiplier": 1,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 0
+        "points": 2
       },
       {
         "element": 508,
@@ -3562,7 +3562,7 @@
         "multiplier": 1,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 0
+        "points": 2
       },
       {
         "element": 470,
