@@ -20,6 +20,13 @@ interface EnrichedPick {
   team: BootstrapTeam | null;
 }
 
+interface SlotAssignment {
+  slotIndex: number;
+  assignedOrder: number;
+}
+
+type GroupedEnrichedPicks = Record<number, EnrichedPick[]>;
+
 const POSITION_GROUPS = [
   { elementType: 1, label: "GK", slots: 2 },
   { elementType: 2, label: "DEF", slots: 5 },
@@ -27,12 +34,12 @@ const POSITION_GROUPS = [
   { elementType: 4, label: "FWD", slots: 3 },
 ] as const;
 
-function buildEventSlots(
+function buildGroupedPicks(
   picks: ManagerPick[] | undefined,
   elementById: Record<number, BootstrapElement>,
   teamById: Record<number, BootstrapTeam>
-): (EnrichedPick | null)[] {
-  const grouped: Record<number, EnrichedPick[]> = {
+): GroupedEnrichedPicks {
+  const grouped: GroupedEnrichedPicks = {
     1: [],
     2: [],
     3: [],
@@ -53,13 +60,101 @@ function buildEventSlots(
     grouped[elementType].sort((a, b) => a.pick.position - b.pick.position);
   }
 
-  const slots: (EnrichedPick | null)[] = [];
-  for (const group of POSITION_GROUPS) {
-    const groupPicks = grouped[group.elementType].slice(0, group.slots);
-    const padded = Array.from({ length: group.slots }, (_, index) => {
-      return groupPicks[index] ?? null;
+  return grouped;
+}
+
+function findFirstOpenSlot(slots: (EnrichedPick | null)[]): number | null {
+  for (let index = 0; index < slots.length; index += 1) {
+    if (!slots[index]) {
+      return index;
+    }
+  }
+  return null;
+}
+
+function buildStableGroupSlots(
+  groupPicks: EnrichedPick[],
+  slotCount: number,
+  assignmentByElement: Map<number, SlotAssignment>
+): (EnrichedPick | null)[] {
+  const slots: (EnrichedPick | null)[] = Array.from({ length: slotCount }, () => null);
+  const pending: EnrichedPick[] = [];
+  const preferredSlotByElement = new Map<number, number>();
+  groupPicks.forEach((entry, index) => {
+    preferredSlotByElement.set(entry.pick.element, index);
+  });
+
+  const knownPicks = groupPicks
+    .filter((entry) => assignmentByElement.has(entry.pick.element))
+    .sort((a, b) => {
+      const aAssignment = assignmentByElement.get(a.pick.element);
+      const bAssignment = assignmentByElement.get(b.pick.element);
+
+      if (aAssignment && bAssignment && aAssignment.assignedOrder !== bAssignment.assignedOrder) {
+        return aAssignment.assignedOrder - bAssignment.assignedOrder;
+      }
+
+      return a.pick.position - b.pick.position;
     });
-    slots.push(...padded);
+
+  for (const entry of knownPicks) {
+    const assignment = assignmentByElement.get(entry.pick.element);
+    if (!assignment) continue;
+
+    if (!slots[assignment.slotIndex]) {
+      slots[assignment.slotIndex] = entry;
+      continue;
+    }
+
+    pending.push(entry);
+  }
+
+  const newPicks = groupPicks.filter((entry) => !assignmentByElement.has(entry.pick.element));
+
+  for (const entry of newPicks) {
+    const preferredSlot = Math.min(
+      preferredSlotByElement.get(entry.pick.element) ?? 0,
+      Math.max(0, slotCount - 1)
+    );
+    const openSlot =
+      slots[preferredSlot] === null ? preferredSlot : findFirstOpenSlot(slots);
+
+    if (openSlot === null) {
+      pending.push(entry);
+      continue;
+    }
+
+    assignmentByElement.set(entry.pick.element, {
+      slotIndex: openSlot,
+      assignedOrder: assignmentByElement.size,
+    });
+    slots[openSlot] = entry;
+  }
+
+  pending.sort((a, b) => {
+    const aAssignment = assignmentByElement.get(a.pick.element);
+    const bAssignment = assignmentByElement.get(b.pick.element);
+
+    if (aAssignment && bAssignment && aAssignment.assignedOrder !== bAssignment.assignedOrder) {
+      return aAssignment.assignedOrder - bAssignment.assignedOrder;
+    }
+    if (aAssignment && !bAssignment) return -1;
+    if (!aAssignment && bAssignment) return 1;
+
+    return a.pick.position - b.pick.position;
+  });
+
+  for (const entry of pending) {
+    const openSlot = findFirstOpenSlot(slots);
+    if (openSlot === null) break;
+    slots[openSlot] = entry;
+
+    if (!assignmentByElement.has(entry.pick.element)) {
+      assignmentByElement.set(entry.pick.element, {
+        slotIndex: openSlot,
+        assignedOrder: assignmentByElement.size,
+      });
+    }
   }
 
   return slots;
@@ -96,6 +191,9 @@ export default function TeamPicksMatrix({
 }: TeamPicksMatrixProps) {
   const elementById = Object.fromEntries(elements.map((element) => [element.id, element]));
   const teamById = Object.fromEntries(teams.map((team) => [team.id, team]));
+  const slotAssignmentsByType = Object.fromEntries(
+    POSITION_GROUPS.map((group) => [group.elementType, new Map<number, SlotAssignment>()])
+  ) as Record<number, Map<number, SlotAssignment>>;
 
   const hasPicksData =
     !!picksByEvent && Object.values(picksByEvent).some((eventPicks) => eventPicks.length > 0);
@@ -121,7 +219,14 @@ export default function TeamPicksMatrix({
   }
 
   const rows = history.map((gw) => {
-    const slots = buildEventSlots(picksByEvent?.[gw.event], elementById, teamById);
+    const groupedPicks = buildGroupedPicks(picksByEvent?.[gw.event], elementById, teamById);
+    const slots = POSITION_GROUPS.flatMap((group) =>
+      buildStableGroupSlots(
+        groupedPicks[group.elementType],
+        group.slots,
+        slotAssignmentsByType[group.elementType]
+      )
+    );
     return { event: gw.event, slots, points: gw.points, total_points: gw.total_points };
   });
 
