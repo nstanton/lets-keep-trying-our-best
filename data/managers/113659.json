@@ -366,17 +366,17 @@
     },
     {
       "event": 27,
-      "points": 18,
-      "total_points": 1478,
-      "rank": 8646383,
-      "rank_sort": 8647883,
-      "overall_rank": 1369247,
+      "points": 35,
+      "total_points": 1495,
+      "rank": 8358264,
+      "rank_sort": 8359497,
+      "overall_rank": 1333432,
       "percentile_rank": 70,
       "bank": 15,
       "value": 1028,
       "event_transfers": 1,
       "event_transfers_cost": 0,
-      "points_on_bench": 4
+      "points_on_bench": 12
     }
   ],
   "past": [
@@ -3618,7 +3618,7 @@
         "multiplier": 1,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 0
+        "points": 1
       },
       {
         "element": 8,
@@ -3626,7 +3626,7 @@
         "multiplier": 1,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 0
+        "points": 3
       },
       {
         "element": 5,
@@ -3634,7 +3634,7 @@
         "multiplier": 1,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 0
+        "points": 2
       },
       {
         "element": 261,
@@ -3642,7 +3642,7 @@
         "multiplier": 1,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 0
+        "points": 6
       },
       {
         "element": 683,
@@ -3650,7 +3650,7 @@
         "multiplier": 1,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 0
+        "points": 1
       },
       {
         "element": 82,
@@ -3690,7 +3690,7 @@
         "multiplier": 1,
         "is_captain": false,
         "is_vice_captain": true,
-        "points": 0
+        "points": 2
       },
       {
         "element": 430,
@@ -3698,7 +3698,7 @@
         "multiplier": 2,
         "is_captain": true,
         "is_vice_captain": false,
-        "points": 5
+        "points": 6
       },
       {
         "element": 470,
@@ -3714,7 +3714,7 @@
         "multiplier": 0,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 0
+        "points": 8
       },
       {
         "element": 303,
