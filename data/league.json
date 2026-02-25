@@ -34,7 +34,8 @@
         "total": 1497,
         "entry": 113659,
         "entry_name": "KerkezStarredReview",
-        "has_played": true
+        "has_played": true,
+        "club_badge_src": null
       },
       {
         "id": 3040207,
@@ -46,7 +47,8 @@
         "total": 1476,
         "entry": 109587,
         "entry_name": "Fer Of God",
-        "has_played": true
+        "has_played": true,
+        "club_badge_src": null
       },
       {
         "id": 17774984,
@@ -58,7 +60,8 @@
         "total": 1439,
         "entry": 2484013,
         "entry_name": "Dribble the trouble",
-        "has_played": true
+        "has_played": true,
+        "club_badge_src": null
       },
       {
         "id": 29743212,
@@ -70,7 +73,8 @@
         "total": 1431,
         "entry": 3953504,
         "entry_name": "Buhjuhguhjuhs",
-        "has_played": true
+        "has_played": true,
+        "club_badge_src": null
       },
       {
         "id": 34071133,
@@ -82,7 +86,8 @@
         "total": 1351,
         "entry": 4471115,
         "entry_name": "Flamengo ate morre",
-        "has_played": true
+        "has_played": true,
+        "club_badge_src": null
       }
     ]
   }
