@@ -377,6 +377,20 @@
       "event_transfers": 0,
       "event_transfers_cost": 0,
       "points_on_bench": 4
+    },
+    {
+      "event": 28,
+      "points": 0,
+      "total_points": 1351,
+      "rank": 12533615,
+      "rank_sort": 12626952,
+      "overall_rank": 5941349,
+      "percentile_rank": 100,
+      "bank": 1,
+      "value": 997,
+      "event_transfers": 3,
+      "event_transfers_cost": 0,
+      "points_on_bench": 0
     }
   ],
   "past": [
@@ -3717,9 +3731,158 @@
         "is_vice_captain": false,
         "points": 2
       }
+    ],
+    "28": [
+      {
+        "element": 470,
+        "position": 1,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0
+      },
+      {
+        "element": 226,
+        "position": 2,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0
+      },
+      {
+        "element": 77,
+        "position": 3,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0
+      },
+      {
+        "element": 8,
+        "position": 4,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0
+      },
+      {
+        "element": 386,
+        "position": 5,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0
+      },
+      {
+        "element": 517,
+        "position": 6,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0
+      },
+      {
+        "element": 82,
+        "position": 7,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0
+      },
+      {
+        "element": 449,
+        "position": 8,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0
+      },
+      {
+        "element": 16,
+        "position": 9,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0
+      },
+      {
+        "element": 430,
+        "position": 10,
+        "multiplier": 2,
+        "is_captain": true,
+        "is_vice_captain": false,
+        "points": 0
+      },
+      {
+        "element": 136,
+        "position": 11,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": true,
+        "points": 0
+      },
+      {
+        "element": 101,
+        "position": 12,
+        "multiplier": 0,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0
+      },
+      {
+        "element": 467,
+        "position": 13,
+        "multiplier": 0,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0
+      },
+      {
+        "element": 473,
+        "position": 14,
+        "multiplier": 0,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0
+      },
+      {
+        "element": 191,
+        "position": 15,
+        "multiplier": 0,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0
+      }
     ]
   },
   "transfers": [
+    {
+      "element_in": 386,
+      "element_in_cost": 62,
+      "element_out": 47,
+      "element_out_cost": 73,
+      "entry": 4471115,
+      "event": 28,
+      "time": "2026-02-27T17:23:06.182994Z"
+    },
+    {
+      "element_in": 82,
+      "element_in_cost": 81,
+      "element_out": 450,
+      "element_out_cost": 80,
+      "entry": 4471115,
+      "event": 28,
+      "time": "2026-02-27T17:23:06.182579Z"
+    },
+    {
+      "element_in": 16,
+      "element_in_cost": 98,
+      "element_out": 382,
+      "element_out_cost": 83,
+      "entry": 4471115,
+      "event": 28,
+      "time": "2026-02-27T17:23:06.176082Z"
+    },
     {
       "element_in": 449,
       "element_in_cost": 97,
