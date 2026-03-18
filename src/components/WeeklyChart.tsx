@@ -43,6 +43,52 @@ const CHIP_DISPLAY: Record<string, string> = {
   freehit: "Free Hit",
 };
 
+interface WeeklyChartTooltipProps {
+  active?: boolean;
+  label?: string;
+  payload?: Array<{
+    payload?: {
+      gw: string;
+      points: number;
+      total: number;
+      transfers: number;
+      cost: number;
+      bench: number;
+      isChip: boolean;
+      chipName?: string;
+    };
+  }>;
+}
+
+function WeeklyChartTooltip({
+  active,
+  payload,
+  label,
+}: WeeklyChartTooltipProps) {
+  if (!active || !payload?.length) return null;
+
+  const d = payload[0]?.payload;
+  if (!d) return null;
+
+  return (
+    <div className="bg-fpl-purple border border-white/20 rounded-lg p-3 text-sm shadow-xl">
+      <p className="font-bold text-white mb-1">{label}</p>
+      <p className="text-fpl-green">Points: {d.points}</p>
+      <p className="text-gray-300">Total: {d.total}</p>
+      <p className="text-gray-300">
+        Transfers: {d.transfers}
+        {d.cost > 0 ? ` (-${d.cost})` : ""}
+      </p>
+      <p className="text-gray-300">Bench: {d.bench}</p>
+      {d.chipName && (
+        <p className="text-fpl-pink mt-1 font-semibold">
+          {CHIP_DISPLAY[d.chipName] || d.chipName}
+        </p>
+      )}
+    </div>
+  );
+}
+
 export default function WeeklyChart({ history, chips }: WeeklyChartProps) {
   const chipEvents = new Set(chips.map((c) => c.event));
 
@@ -56,30 +102,6 @@ export default function WeeklyChart({ history, chips }: WeeklyChartProps) {
     isChip: chipEvents.has(h.event),
     chipName: chips.find((c) => c.event === h.event)?.name,
   }));
-
-  // Custom tooltip with proper typing
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const CustomTooltip = ({ active, payload, label }: any) => {
-    if (!active || !payload?.length) return null;
-    const d = payload[0]?.payload;
-    return (
-      <div className="bg-fpl-purple border border-white/20 rounded-lg p-3 text-sm shadow-xl">
-        <p className="font-bold text-white mb-1">{label}</p>
-        <p className="text-fpl-green">Points: {d.points}</p>
-        <p className="text-gray-300">Total: {d.total}</p>
-        <p className="text-gray-300">
-          Transfers: {d.transfers}
-          {d.cost > 0 ? ` (-${d.cost})` : ""}
-        </p>
-        <p className="text-gray-300">Bench: {d.bench}</p>
-        {d.chipName && (
-          <p className="text-fpl-pink mt-1 font-semibold">
-            {CHIP_DISPLAY[d.chipName] || d.chipName}
-          </p>
-        )}
-      </div>
-    );
-  };
 
   if (history.length === 0) {
     return (
@@ -116,7 +138,7 @@ export default function WeeklyChart({ history, chips }: WeeklyChartProps) {
             tick={{ fill: "#9ca3af", fontSize: 12 }}
             axisLine={{ stroke: "rgba(255,255,255,0.2)" }}
           />
-          <Tooltip content={<CustomTooltip />} />
+          <Tooltip content={<WeeklyChartTooltip />} />
           <Bar yAxisId="points" dataKey="points" radius={[4, 4, 0, 0]}>
             {data.map((entry, index) => (
               <Cell
