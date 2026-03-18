@@ -1,15 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --fpl-purple: #37003c;
-  --fpl-dark-purple: #2c003e;
-  --fpl-green: #00ff87;
-  --fpl-pink: #e90052;
-  --fpl-light-purple: #963cff;
-  --fpl-cyan: #05f0ff;
-}
+@config "../../tailwind.config.js";
+@import "tailwindcss";
 
 body {
   @apply bg-fpl-dark-purple text-white min-h-screen;

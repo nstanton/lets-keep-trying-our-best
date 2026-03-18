@@ -34,15 +34,72 @@ interface PointsLeagueChartProps {
   totalGameweeks: number;
 }
 
+interface PointsLeagueTooltipProps {
+  active?: boolean;
+  label?: string;
+  managers: ProcessedManager[];
+  payload?: Array<{
+    payload?: Record<string, number | string | undefined> & {
+      gw: number;
+      gwLabel: string;
+    };
+  }>;
+}
+
+function PointsLeagueTooltip({
+  active,
+  payload,
+  label,
+  managers,
+}: PointsLeagueTooltipProps) {
+  if (!active || !payload?.length) return null;
+
+  const d = payload[0]?.payload;
+  if (!d) return null;
+
+  const entries = managers
+    .map((m) => {
+      const pts = d[String(m.entry)];
+      const chip = m.chips.find((c) => c.event === d.gw);
+      return {
+        name: m.entry_name || m.player_name,
+        pts,
+        chip,
+      };
+    })
+    .filter((e) => e.pts !== undefined)
+    .sort((a, b) => (b.pts as number) - (a.pts as number));
+
+  return (
+    <div className="bg-fpl-purple border border-white/20 rounded-lg p-3 text-sm shadow-xl min-w-[140px]">
+      <p className="font-bold text-white mb-2">{label}</p>
+      <div className="space-y-1">
+        {entries.map(({ name, pts, chip }) => (
+          <div key={name} className="flex justify-between items-center gap-4 text-gray-300">
+            <span className="truncate max-w-[100px] flex items-center gap-1">
+              {chip && (
+                <span
+                  className="text-xs flex-shrink-0"
+                  style={{ color: CHIP_CHART_COLORS[chip.name] ?? "#e90052" }}
+                  title={CHIP_DISPLAY_NAMES[chip.name] || chip.name}
+                >
+                  ◆
+                </span>
+              )}
+              {name}
+            </span>
+            <span className="font-medium text-fpl-green">{pts}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function PointsLeagueChart({
   managers,
   totalGameweeks,
 }: PointsLeagueChartProps) {
-  const entryToName = new Map<number, string>();
-  managers.forEach((m) => {
-    entryToName.set(m.entry, m.entry_name || m.player_name);
-  });
-
   const data = Array.from({ length: totalGameweeks }, (_, i) => {
     const gw = i + 1;
     const row: Record<string, number | string | undefined> = {
@@ -55,9 +112,6 @@ export default function PointsLeagueChart({
     });
     return row;
   });
-
-  const getChipAtGw = (entry: number, gw: number) =>
-    managers.find((m) => m.entry === entry)?.chips.find((c) => c.event === gw);
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const ChipDot = (props: any, chips: { event: number; name: string }[]) => {
@@ -75,51 +129,6 @@ export default function PointsLeagueChart({
           strokeWidth={1}
         />
       </g>
-    );
-  };
-
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const CustomTooltip = ({ active, payload, label }: any) => {
-    if (!active || !payload?.length) return null;
-    const d = payload[0]?.payload;
-    if (!d) return null;
-
-    const entries = managers
-      .map((m) => {
-        const pts = d[String(m.entry)];
-        const chip = getChipAtGw(m.entry, d.gw);
-        return {
-          name: entryToName.get(m.entry) ?? m.entry_name ?? m.player_name,
-          pts,
-          chip,
-        };
-      })
-      .filter((e) => e.pts !== undefined)
-      .sort((a, b) => (b.pts as number) - (a.pts as number));
-
-    return (
-      <div className="bg-fpl-purple border border-white/20 rounded-lg p-3 text-sm shadow-xl min-w-[140px]">
-        <p className="font-bold text-white mb-2">{label}</p>
-        <div className="space-y-1">
-          {entries.map(({ name, pts, chip }) => (
-            <div key={name} className="flex justify-between items-center gap-4 text-gray-300">
-              <span className="truncate max-w-[100px] flex items-center gap-1">
-                {chip && (
-                  <span
-                    className="text-xs flex-shrink-0"
-                    style={{ color: CHIP_CHART_COLORS[chip.name] ?? "#e90052" }}
-                    title={CHIP_DISPLAY_NAMES[chip.name] || chip.name}
-                  >
-                    ◆
-                  </span>
-                )}
-                {name}
-              </span>
-              <span className="font-medium text-fpl-green">{pts}</span>
-            </div>
-          ))}
-        </div>
-      </div>
     );
   };
 
@@ -186,7 +195,7 @@ export default function PointsLeagueChart({
             tick={{ fill: "#9ca3af", fontSize: 12 }}
             axisLine={{ stroke: "rgba(255,255,255,0.2)" }}
           />
-          <Tooltip content={<CustomTooltip />} />
+          <Tooltip content={<PointsLeagueTooltip managers={managers} />} />
           <Legend content={renderLegend} />
           {managers.map((m, i) => (
             <Line
