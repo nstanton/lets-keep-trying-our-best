@@ -17,6 +17,9 @@ export default function Header() {
                 <Link href="/" className="text-gray-300 hover:text-white text-sm font-medium transition-colors">
                   Standings
                 </Link>
+                <Link href="/distribution" className="text-gray-300 hover:text-white text-sm font-medium transition-colors">
+                  Distribution
+                </Link>
                 <Link href="#about" className="text-gray-300 hover:text-white text-sm font-medium transition-colors">
                   About
                 </Link>
