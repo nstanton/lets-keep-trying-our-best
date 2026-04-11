@@ -4,7 +4,7 @@
     "page": 1,
     "results": []
   },
-  "last_updated_data": "2026-03-22T17:23:20Z",
+  "last_updated_data": "2026-04-11T00:25:55Z",
   "league": {
     "id": 79657,
     "name": "Let's Keep Trying Our Best!",
@@ -26,7 +26,7 @@
     "results": [
       {
         "id": 3040200,
-        "event_total": 68,
+        "event_total": 0,
         "player_name": "Nate Jones",
         "rank": 1,
         "last_rank": 1,
@@ -39,7 +39,7 @@
       },
       {
         "id": 3040207,
-        "event_total": 61,
+        "event_total": 0,
         "player_name": "Blake Lowell",
         "rank": 2,
         "last_rank": 2,
@@ -52,12 +52,12 @@
       },
       {
         "id": 29743212,
-        "event_total": 81,
+        "event_total": 2,
         "player_name": "Robert Norman",
         "rank": 3,
         "last_rank": 3,
         "rank_sort": 3,
-        "total": 1707,
+        "total": 1709,
         "entry": 3953504,
         "entry_name": "Buhjuhguhjuhs",
         "has_played": true,
@@ -65,7 +65,7 @@
       },
       {
         "id": 17774984,
-        "event_total": 50,
+        "event_total": 0,
         "player_name": "Nathan Stanton",
         "rank": 4,
         "last_rank": 4,
@@ -78,7 +78,7 @@
       },
       {
         "id": 34071133,
-        "event_total": 32,
+        "event_total": 0,
         "player_name": "Davi Parente",
         "rank": 5,
         "last_rank": 5,
