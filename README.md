@@ -58,6 +58,8 @@ After data is committed, the deploy workflow will build and publish the site. Th
 ### 3. Local Development
 
 ```bash
+nvm install 22.13.0
+nvm use 22.13.0
 npm install
 npm run fetch-data   # Populate data/ first
 npm run dev
@@ -82,6 +84,9 @@ npm run fetch-data
 ## Build
 
 ```bash
+nvm install 22.13.0
+nvm use 22.13.0
+npm run typecheck
 npm run build
 ```
 
