@@ -2,10 +2,14 @@
   "name": "lets-keep-trying-our-best",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=22.13.0 <23"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "typecheck": "tsc --noEmit",
     "lint": "eslint . --max-warnings=0",
     "fetch-data": "tsx scripts/fetch-data.ts",
     "fetch-historical": "tsx scripts/fetch-historical-players.ts"
