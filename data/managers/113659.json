@@ -447,6 +447,20 @@
       "event_transfers": 0,
       "event_transfers_cost": 0,
       "points_on_bench": 11
+    },
+    {
+      "event": 33,
+      "points": 45,
+      "total_points": 1887,
+      "rank": 295951,
+      "rank_sort": 296550,
+      "overall_rank": 363414,
+      "percentile_rank": 5,
+      "bank": 9,
+      "value": 1024,
+      "event_transfers": 0,
+      "event_transfers_cost": 0,
+      "points_on_bench": 0
     }
   ],
   "past": [
@@ -511,6 +525,11 @@
       "name": "wildcard",
       "time": "2026-04-04T18:08:48.982597Z",
       "event": 32
+    },
+    {
+      "name": "bboost",
+      "time": "2026-04-10T19:06:37.458321Z",
+      "event": 33
     }
   ],
   "picks_by_event": {
@@ -4416,6 +4435,128 @@
         "is_captain": false,
         "is_vice_captain": false,
         "points": 2
+      }
+    ],
+    "33": [
+      {
+        "element": 139,
+        "position": 1,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 2
+      },
+      {
+        "element": 151,
+        "position": 2,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 6
+      },
+      {
+        "element": 343,
+        "position": 3,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 7
+      },
+      {
+        "element": 411,
+        "position": 4,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0
+      },
+      {
+        "element": 77,
+        "position": 5,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 4
+      },
+      {
+        "element": 82,
+        "position": 6,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0
+      },
+      {
+        "element": 235,
+        "position": 7,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": true,
+        "points": 2
+      },
+      {
+        "element": 84,
+        "position": 8,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 7
+      },
+      {
+        "element": 178,
+        "position": 9,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 2
+      },
+      {
+        "element": 249,
+        "position": 10,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0
+      },
+      {
+        "element": 430,
+        "position": 11,
+        "multiplier": 2,
+        "is_captain": true,
+        "is_vice_captain": false,
+        "points": 0
+      },
+      {
+        "element": 341,
+        "position": 12,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 6
+      },
+      {
+        "element": 449,
+        "position": 13,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 6
+      },
+      {
+        "element": 354,
+        "position": 14,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 3
+      },
+      {
+        "element": 5,
+        "position": 15,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0
       }
     ]
   },
