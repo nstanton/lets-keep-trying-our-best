@@ -450,11 +450,11 @@
     },
     {
       "event": 33,
-      "points": 45,
-      "total_points": 1887,
-      "rank": 295951,
-      "rank_sort": 296550,
-      "overall_rank": 363414,
+      "points": 66,
+      "total_points": 1908,
+      "rank": 473435,
+      "rank_sort": 474181,
+      "overall_rank": 380727,
       "percentile_rank": 5,
       "bank": 9,
       "value": 1024,
@@ -4468,7 +4468,7 @@
         "multiplier": 1,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 0
+        "points": 7
       },
       {
         "element": 77,
@@ -4484,7 +4484,7 @@
         "multiplier": 1,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 0
+        "points": 2
       },
       {
         "element": 235,
@@ -4524,7 +4524,7 @@
         "multiplier": 2,
         "is_captain": true,
         "is_vice_captain": false,
-        "points": 0
+        "points": 6
       },
       {
         "element": 341,
