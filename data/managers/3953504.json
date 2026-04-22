@@ -452,15 +452,15 @@
       "event": 33,
       "points": 53,
       "total_points": 1820,
-      "rank": 2095675,
-      "rank_sort": 2141656,
-      "overall_rank": 1511665,
-      "percentile_rank": 20,
+      "rank": 2915109,
+      "rank_sort": 2955565,
+      "overall_rank": 1605829,
+      "percentile_rank": 25,
       "bank": 0,
       "value": 1010,
       "event_transfers": 0,
       "event_transfers_cost": 0,
-      "points_on_bench": 9
+      "points_on_bench": 11
     }
   ],
   "past": [
@@ -4527,7 +4527,7 @@
         "multiplier": 0,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 2
+        "points": 4
       },
       {
         "element": 505,

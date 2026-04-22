@@ -4,7 +4,7 @@
     "page": 1,
     "results": []
   },
-  "last_updated_data": "2026-04-20T23:24:27Z",
+  "last_updated_data": "2026-04-21T23:19:03Z",
   "league": {
     "id": 79657,
     "name": "Let's Keep Trying Our Best!",
@@ -26,12 +26,12 @@
     "results": [
       {
         "id": 3040200,
-        "event_total": 66,
+        "event_total": 85,
         "player_name": "Nate Jones",
         "rank": 1,
         "last_rank": 1,
         "rank_sort": 1,
-        "total": 1908,
+        "total": 1927,
         "entry": 113659,
         "entry_name": "KerkezStarredReview",
         "has_played": true,
@@ -65,12 +65,12 @@
       },
       {
         "id": 17774984,
-        "event_total": 74,
+        "event_total": 82,
         "player_name": "Nathan Stanton",
         "rank": 4,
         "last_rank": 4,
         "rank_sort": 4,
-        "total": 1798,
+        "total": 1806,
         "entry": 2484013,
         "entry_name": "Dribble the trouble",
         "has_played": true,
@@ -78,12 +78,12 @@
       },
       {
         "id": 34071133,
-        "event_total": 30,
+        "event_total": 31,
         "player_name": "Davi Parente",
         "rank": 5,
         "last_rank": 5,
         "rank_sort": 5,
-        "total": 1627,
+        "total": 1628,
         "entry": 4471115,
         "entry_name": "Flamengo ate morre",
         "has_played": true,

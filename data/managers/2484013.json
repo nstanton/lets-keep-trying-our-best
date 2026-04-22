@@ -450,11 +450,11 @@
     },
     {
       "event": 33,
-      "points": 74,
-      "total_points": 1798,
-      "rank": 200545,
-      "rank_sort": 203985,
-      "overall_rank": 1921069,
+      "points": 82,
+      "total_points": 1806,
+      "rank": 347798,
+      "rank_sort": 351475,
+      "overall_rank": 1860915,
       "percentile_rank": 5,
       "bank": 16,
       "value": 992,
@@ -4487,7 +4487,7 @@
         "multiplier": 1,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 8
+        "points": 16
       },
       {
         "element": 82,
