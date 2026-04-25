@@ -461,6 +461,20 @@
       "event_transfers": 0,
       "event_transfers_cost": 0,
       "points_on_bench": 0
+    },
+    {
+      "event": 34,
+      "points": 20,
+      "total_points": 1874,
+      "rank": 334232,
+      "rank_sort": 340770,
+      "overall_rank": 1281877,
+      "percentile_rank": 5,
+      "bank": 16,
+      "value": 992,
+      "event_transfers": 0,
+      "event_transfers_cost": 0,
+      "points_on_bench": 0
     }
   ],
   "past": [
@@ -525,6 +539,11 @@
       "name": "bboost",
       "time": "2026-04-13T15:55:06.091321Z",
       "event": 33
+    },
+    {
+      "name": "freehit",
+      "time": "2026-04-24T12:54:16.174517Z",
+      "event": 34
     }
   ],
   "picks_by_event": {
@@ -4553,9 +4572,248 @@
         "is_vice_captain": false,
         "points": 19
       }
+    ],
+    "34": [
+      {
+        "element": 502,
+        "position": 1,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 7
+      },
+      {
+        "element": 5,
+        "position": 2,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0
+      },
+      {
+        "element": 373,
+        "position": 3,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0
+      },
+      {
+        "element": 6,
+        "position": 4,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0
+      },
+      {
+        "element": 449,
+        "position": 5,
+        "multiplier": 2,
+        "is_captain": true,
+        "is_vice_captain": false,
+        "points": 0
+      },
+      {
+        "element": 21,
+        "position": 6,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0
+      },
+      {
+        "element": 515,
+        "position": 7,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 13
+      },
+      {
+        "element": 457,
+        "position": 8,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0
+      },
+      {
+        "element": 450,
+        "position": 9,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0
+      },
+      {
+        "element": 624,
+        "position": 10,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": true,
+        "points": 0
+      },
+      {
+        "element": 136,
+        "position": 11,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0
+      },
+      {
+        "element": 368,
+        "position": 12,
+        "multiplier": 0,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0
+      },
+      {
+        "element": 606,
+        "position": 13,
+        "multiplier": 0,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0
+      },
+      {
+        "element": 295,
+        "position": 14,
+        "multiplier": 0,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0
+      },
+      {
+        "element": 337,
+        "position": 15,
+        "multiplier": 0,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0
+      }
     ]
   },
   "transfers": [
+    {
+      "element_in": 136,
+      "element_in_cost": 74,
+      "element_out": 691,
+      "element_out_cost": 57,
+      "entry": 2484013,
+      "event": 34,
+      "time": "2026-04-24T12:56:01.233430Z"
+    },
+    {
+      "element_in": 337,
+      "element_in_cost": 61,
+      "element_out": 430,
+      "element_out_cost": 145,
+      "entry": 2484013,
+      "event": 34,
+      "time": "2026-04-24T12:56:01.233280Z"
+    },
+    {
+      "element_in": 624,
+      "element_in_cost": 77,
+      "element_out": 249,
+      "element_out_cost": 76,
+      "entry": 2484013,
+      "event": 34,
+      "time": "2026-04-24T12:56:01.233093Z"
+    },
+    {
+      "element_in": 515,
+      "element_in_cost": 75,
+      "element_out": 783,
+      "element_out_cost": 55,
+      "entry": 2484013,
+      "event": 34,
+      "time": "2026-04-24T12:56:01.232940Z"
+    },
+    {
+      "element_in": 21,
+      "element_in_cost": 72,
+      "element_out": 354,
+      "element_out_cost": 49,
+      "entry": 2484013,
+      "event": 34,
+      "time": "2026-04-24T12:56:01.232778Z"
+    },
+    {
+      "element_in": 450,
+      "element_in_cost": 80,
+      "element_out": 84,
+      "element_out_cost": 54,
+      "entry": 2484013,
+      "event": 34,
+      "time": "2026-04-24T12:56:01.232626Z"
+    },
+    {
+      "element_in": 457,
+      "element_in_cost": 57,
+      "element_out": 82,
+      "element_out_cost": 82,
+      "entry": 2484013,
+      "event": 34,
+      "time": "2026-04-24T12:56:01.232465Z"
+    },
+    {
+      "element_in": 295,
+      "element_in_cost": 45,
+      "element_out": 706,
+      "element_out_cost": 39,
+      "entry": 2484013,
+      "event": 34,
+      "time": "2026-04-24T12:56:01.232309Z"
+    },
+    {
+      "element_in": 606,
+      "element_in_cost": 45,
+      "element_out": 411,
+      "element_out_cost": 50,
+      "entry": 2484013,
+      "event": 34,
+      "time": "2026-04-24T12:56:01.232124Z"
+    },
+    {
+      "element_in": 6,
+      "element_in_cost": 61,
+      "element_out": 77,
+      "element_out_cost": 41,
+      "entry": 2484013,
+      "event": 34,
+      "time": "2026-04-24T12:56:01.231964Z"
+    },
+    {
+      "element_in": 373,
+      "element_in_cost": 62,
+      "element_out": 72,
+      "element_out_cost": 51,
+      "entry": 2484013,
+      "event": 34,
+      "time": "2026-04-24T12:56:01.231786Z"
+    },
+    {
+      "element_in": 368,
+      "element_in_cost": 38,
+      "element_out": 470,
+      "element_out_cost": 40,
+      "entry": 2484013,
+      "event": 34,
+      "time": "2026-04-24T12:56:01.231611Z"
+    },
+    {
+      "element_in": 502,
+      "element_in_cost": 46,
+      "element_out": 1,
+      "element_out_cost": 60,
+      "entry": 2484013,
+      "event": 34,
+      "time": "2026-04-24T12:56:01.231389Z"
+    },
     {
       "element_in": 249,
       "element_in_cost": 78,
