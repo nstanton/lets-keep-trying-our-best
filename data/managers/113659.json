@@ -464,17 +464,17 @@
     },
     {
       "event": 34,
-      "points": 13,
-      "total_points": 1979,
-      "rank": 901177,
-      "rank_sort": 916002,
-      "overall_rank": 239249,
-      "percentile_rank": 10,
+      "points": 53,
+      "total_points": 2019,
+      "rank": 561700,
+      "rank_sort": 563183,
+      "overall_rank": 230533,
+      "percentile_rank": 5,
       "bank": 9,
       "value": 1023,
       "event_transfers": 0,
       "event_transfers_cost": 0,
-      "points_on_bench": 0
+      "points_on_bench": 7
     }
   ],
   "past": [
@@ -4585,7 +4585,7 @@
         "multiplier": 1,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 0
+        "points": 10
       },
       {
         "element": 373,
@@ -4593,7 +4593,7 @@
         "multiplier": 1,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 0
+        "points": 4
       },
       {
         "element": 5,
@@ -4601,7 +4601,7 @@
         "multiplier": 1,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 0
+        "points": 8
       },
       {
         "element": 568,
@@ -4609,7 +4609,7 @@
         "multiplier": 1,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 0
+        "points": 9
       },
       {
         "element": 515,
@@ -4625,7 +4625,7 @@
         "multiplier": 1,
         "is_captain": false,
         "is_vice_captain": true,
-        "points": 0
+        "points": 1
       },
       {
         "element": 717,
@@ -4633,7 +4633,7 @@
         "multiplier": 1,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 0
+        "points": 3
       },
       {
         "element": 449,
@@ -4649,7 +4649,7 @@
         "multiplier": 1,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 0
+        "points": 1
       },
       {
         "element": 136,
@@ -4665,7 +4665,7 @@
         "multiplier": 1,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 0
+        "points": 4
       },
       {
         "element": 105,
@@ -4681,7 +4681,7 @@
         "multiplier": 0,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 0
+        "points": 3
       },
       {
         "element": 606,
@@ -4689,7 +4689,7 @@
         "multiplier": 0,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 0
+        "points": 4
       },
       {
         "element": 447,
