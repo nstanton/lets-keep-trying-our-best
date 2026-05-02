@@ -475,6 +475,20 @@
       "event_transfers": 2,
       "event_transfers_cost": 0,
       "points_on_bench": 3
+    },
+    {
+      "event": 35,
+      "points": 0,
+      "total_points": 1908,
+      "rank": 3331721,
+      "rank_sort": 5349586,
+      "overall_rank": 1435441,
+      "percentile_rank": 30,
+      "bank": 1,
+      "value": 1008,
+      "event_transfers": 0,
+      "event_transfers_cost": 0,
+      "points_on_bench": 2
     }
   ],
   "past": [
@@ -539,6 +553,11 @@
       "name": "freehit",
       "time": "2026-03-16T22:08:30.461786Z",
       "event": 31
+    },
+    {
+      "name": "wildcard",
+      "time": "2026-04-29T17:13:31.597104Z",
+      "event": 35
     }
   ],
   "picks_by_event": {
@@ -4689,9 +4708,185 @@
         "is_vice_captain": false,
         "points": 0
       }
+    ],
+    "35": [
+      {
+        "element": 1,
+        "position": 1,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0
+      },
+      {
+        "element": 5,
+        "position": 2,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": true,
+        "points": 0
+      },
+      {
+        "element": 407,
+        "position": 3,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0
+      },
+      {
+        "element": 508,
+        "position": 4,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0
+      },
+      {
+        "element": 74,
+        "position": 5,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0
+      },
+      {
+        "element": 457,
+        "position": 6,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0
+      },
+      {
+        "element": 449,
+        "position": 7,
+        "multiplier": 2,
+        "is_captain": true,
+        "is_vice_captain": false,
+        "points": 0
+      },
+      {
+        "element": 515,
+        "position": 8,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0
+      },
+      {
+        "element": 624,
+        "position": 9,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0
+      },
+      {
+        "element": 136,
+        "position": 10,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0
+      },
+      {
+        "element": 430,
+        "position": 11,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0
+      },
+      {
+        "element": 470,
+        "position": 12,
+        "multiplier": 0,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 2
+      },
+      {
+        "element": 505,
+        "position": 13,
+        "multiplier": 0,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0
+      },
+      {
+        "element": 272,
+        "position": 14,
+        "multiplier": 0,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0
+      },
+      {
+        "element": 90,
+        "position": 15,
+        "multiplier": 0,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0
+      }
     ]
   },
   "transfers": [
+    {
+      "element_in": 90,
+      "element_in_cost": 51,
+      "element_out": 169,
+      "element_out_cost": 49,
+      "entry": 3953504,
+      "event": 35,
+      "time": "2026-04-29T17:13:39.842804Z"
+    },
+    {
+      "element_in": 272,
+      "element_in_cost": 49,
+      "element_out": 646,
+      "element_out_cost": 53,
+      "entry": 3953504,
+      "event": 35,
+      "time": "2026-04-29T17:13:39.842411Z"
+    },
+    {
+      "element_in": 1,
+      "element_in_cost": 60,
+      "element_out": 220,
+      "element_out_cost": 48,
+      "entry": 3953504,
+      "event": 35,
+      "time": "2026-04-29T17:13:39.842063Z"
+    },
+    {
+      "element_in": 74,
+      "element_in_cost": 47,
+      "element_out": 373,
+      "element_out_cost": 60,
+      "entry": 3953504,
+      "event": 35,
+      "time": "2026-04-29T17:13:39.841673Z"
+    },
+    {
+      "element_in": 430,
+      "element_in_cost": 145,
+      "element_out": 714,
+      "element_out_cost": 67,
+      "entry": 3953504,
+      "event": 35,
+      "time": "2026-04-29T17:13:39.841313Z"
+    },
+    {
+      "element_in": 407,
+      "element_in_cost": 53,
+      "element_out": 8,
+      "element_out_cost": 58,
+      "entry": 3953504,
+      "event": 35,
+      "time": "2026-04-29T17:13:39.840845Z"
+    },
     {
       "element_in": 457,
       "element_in_cost": 57,
