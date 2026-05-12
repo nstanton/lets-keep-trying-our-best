@@ -4,7 +4,7 @@
     "page": 1,
     "results": []
   },
-  "last_updated_data": "2026-05-10T19:56:44Z",
+  "last_updated_data": "2026-05-11T23:33:04Z",
   "league": {
     "id": 79657,
     "name": "Let's Keep Trying Our Best!",
@@ -39,12 +39,12 @@
       },
       {
         "id": 17774984,
-        "event_total": 59,
+        "event_total": 73,
         "player_name": "Nathan Stanton",
         "rank": 2,
         "last_rank": 3,
         "rank_sort": 2,
-        "total": 2038,
+        "total": 2052,
         "entry": 2484013,
         "entry_name": "Dribble the trouble",
         "has_played": true,
