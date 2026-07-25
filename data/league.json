@@ -4,6 +4,13 @@
     "page": 1,
     "results": [
       {
+        "entry": 818714,
+        "entry_name": "Tiki Tanaka",
+        "joined_time": "2026-07-24T09:51:27.329577Z",
+        "player_first_name": "Dylan",
+        "player_last_name": "Singleton"
+      },
+      {
         "entry": 618738,
         "entry_name": "Daylight Brobbey",
         "joined_time": "2026-07-23T22:04:52.484220Z",
@@ -23,13 +30,6 @@
         "joined_time": "2026-07-23T16:51:10.591394Z",
         "player_first_name": "Darragh",
         "player_last_name": "Magee"
-      },
-      {
-        "entry": 395565,
-        "entry_name": "Dylan's Team",
-        "joined_time": "2026-07-23T16:40:44.241854Z",
-        "player_first_name": "Dylan",
-        "player_last_name": "Singleton"
       },
       {
         "entry": 395120,
