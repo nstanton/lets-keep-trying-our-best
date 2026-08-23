@@ -22,82 +22,82 @@
         "club_badge_src": null,
         "entry": 818714,
         "entry_name": "Tiki Tanaka",
-        "event_total": 21,
+        "event_total": 29,
         "last_rank": 0,
         "player_name": "Dylan Singleton",
         "rank": 1,
         "rank_sort": 1,
-        "total": 21
-      },
-      {
-        "club_badge_src": "https://fantasy.premierleague.com/gcs/plfpl-production-adobe-approved/plfpl-production/395120/d499e186-aedd-4b19-a929-fb97867e8f89.png",
-        "entry": 395120,
-        "entry_name": "BIG I FC",
-        "event_total": 9,
-        "last_rank": 0,
-        "player_name": "Iestyn Smith",
-        "rank": 2,
-        "rank_sort": 2,
-        "total": 9
-      },
-      {
-        "club_badge_src": null,
-        "entry": 415353,
-        "entry_name": "wing wong frimpong",
-        "event_total": 5,
-        "last_rank": 0,
-        "player_name": "Harvey Neame",
-        "rank": 3,
-        "rank_sort": 3,
-        "total": 5
-      },
-      {
-        "club_badge_src": null,
-        "entry": 3368741,
-        "entry_name": "Ballon'dorgu",
-        "event_total": 0,
-        "last_rank": 0,
-        "player_name": "Sir Piastri",
-        "rank": 4,
-        "rank_sort": 4,
-        "total": 0
+        "total": 29
       },
       {
         "club_badge_src": null,
         "entry": 395565,
         "entry_name": "Dylan's Team",
-        "event_total": 0,
+        "event_total": 22,
         "last_rank": 0,
         "player_name": "Dylan Singleton",
-        "rank": 4,
-        "rank_sort": 5,
-        "total": 0
-      },
-      {
-        "club_badge_src": null,
-        "entry": 618738,
-        "entry_name": "Daylight Brobbey",
-        "event_total": 0,
-        "last_rank": 0,
-        "player_name": "Jhon John",
-        "rank": 4,
-        "rank_sort": 6,
-        "total": 0
+        "rank": 2,
+        "rank_sort": 2,
+        "total": 22
       },
       {
         "club_badge_src": null,
         "entry": 406058,
         "entry_name": "Chicken Ekitikka",
-        "event_total": 0,
+        "event_total": 20,
         "last_rank": 0,
         "player_name": "Darragh Magee",
+        "rank": 3,
+        "rank_sort": 3,
+        "total": 20
+      },
+      {
+        "club_badge_src": null,
+        "entry": 3368741,
+        "entry_name": "Ballon'dorgu",
+        "event_total": 19,
+        "last_rank": 0,
+        "player_name": "Sir Piastri",
         "rank": 4,
+        "rank_sort": 4,
+        "total": 19
+      },
+      {
+        "club_badge_src": null,
+        "entry": 415353,
+        "entry_name": "wing wong frimpong",
+        "event_total": 16,
+        "last_rank": 0,
+        "player_name": "Harvey Neame",
+        "rank": 5,
+        "rank_sort": 5,
+        "total": 16
+      },
+      {
+        "club_badge_src": null,
+        "entry": 618738,
+        "entry_name": "Daylight Brobbey",
+        "event_total": 12,
+        "last_rank": 0,
+        "player_name": "Jhon John",
+        "rank": 6,
+        "rank_sort": 6,
+        "total": 12
+      },
+      {
+        "club_badge_src": "https://fantasy.premierleague.com/gcs/plfpl-production-adobe-approved/plfpl-production/395120/d499e186-aedd-4b19-a929-fb97867e8f89.png",
+        "entry": 395120,
+        "entry_name": "BIG I FC",
+        "event_total": 10,
+        "last_rank": 0,
+        "player_name": "Iestyn Smith",
+        "rank": 7,
         "rank_sort": 7,
-        "total": 0
+        "total": 10
       }
     ]
   },
-  "last_updated_data": "2026-08-22T06:18:05Z",
+  "last_updated_data": "2026-08-23T06:23:18Z",
   "new_entries": {
     "has_next": false,
     "page": 1,
