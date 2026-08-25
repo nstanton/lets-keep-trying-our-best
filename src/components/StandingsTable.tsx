@@ -9,6 +9,7 @@ interface StandingsTableProps {
   managers: ProcessedManager[];
   currentGameweek: number;
   totalGameweeks: number;
+  managerPathPrefix?: string;
 }
 
 function getGameweekChip(
@@ -23,6 +24,7 @@ export default function StandingsTable({
   managers,
   currentGameweek,
   totalGameweeks,
+  managerPathPrefix = "/manager",
 }: StandingsTableProps) {
   const [selectedGw, setSelectedGw] = useState(currentGameweek);
 
@@ -152,7 +154,7 @@ export default function StandingsTable({
                     </td>
                     <td className="px-4 py-3">
                       <Link
-                        href={`/manager/${standing.entry}`}
+                        href={`${managerPathPrefix}/${standing.entry}`}
                         className="hover:text-fpl-green transition-colors"
                       >
                         <div className="font-medium text-white">

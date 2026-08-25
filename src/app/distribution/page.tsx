@@ -85,8 +85,7 @@ export default async function DistributionPage() {
         <p className="text-gray-400 mt-3 max-w-3xl">
           These charts compare the top {TOP_PLAYER_LIMIT} scorers at each position
           across the last four seasons. The dot plots show raw player point totals
-          by rank, with 2025/26 on a separate right axis so the current season does
-          not flatten the completed years.
+          by rank across the last four seasons, including the live 2026/27 season.
         </p>
       </div>
 

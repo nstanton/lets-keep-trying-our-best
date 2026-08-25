@@ -6,6 +6,7 @@ import {
   getLeagueData,
   getManagerData,
 } from "@/lib/data";
+import { getSeasonConfig, managerPath, LIVE_SEASON, type SeasonKey } from "@/lib/seasons";
 import TeamPicksMatrix from "@/components/TeamPicksMatrix";
 
 export async function generateStaticParams() {
@@ -34,14 +35,20 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export default async function ManagerPicksPage({ params }: PageProps) {
-  const { id } = await params;
-  const managerId = parseInt(id, 10);
+export async function ManagerPicksPageContent({
+  managerId,
+  season = LIVE_SEASON,
+}: {
+  managerId: number;
+  season?: SeasonKey;
+}) {
+  const seasonConfig = getSeasonConfig(season);
+  const standingsHref = seasonConfig.routePrefix || "/";
 
   const [managerData, leagueData, bootstrap] = await Promise.all([
-    getManagerData(managerId),
-    getLeagueData(),
-    getBootstrapData(),
+    getManagerData(managerId, season),
+    getLeagueData(season),
+    getBootstrapData(season),
   ]);
 
   const standing = leagueData?.standings.results.find((result) => result.entry === managerId);
@@ -49,7 +56,7 @@ export default async function ManagerPicksPage({ params }: PageProps) {
   if (!managerData || !standing || !bootstrap) {
     return (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <Link href="/" className="text-fpl-green hover:underline text-sm mb-4 inline-block">
+        <Link href={standingsHref} className="text-fpl-green hover:underline text-sm mb-4 inline-block">
           &larr; Back to Standings
         </Link>
         <div className="bg-fpl-purple/50 rounded-xl p-12 text-center border border-white/10">
@@ -66,10 +73,10 @@ export default async function ManagerPicksPage({ params }: PageProps) {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mb-6">
-        <Link href="/" className="text-fpl-green hover:underline text-sm">
+        <Link href={standingsHref} className="text-fpl-green hover:underline text-sm">
           &larr; Back to Standings
         </Link>
-        <Link href={`/manager/${managerId}`} className="text-fpl-cyan hover:underline text-sm">
+        <Link href={managerPath(season, managerId)} className="text-fpl-cyan hover:underline text-sm">
           &larr; Back to Manager Summary
         </Link>
       </div>
@@ -115,4 +122,9 @@ export default async function ManagerPicksPage({ params }: PageProps) {
       />
     </div>
   );
+}
+
+export default async function ManagerPicksPage({ params }: PageProps) {
+  const { id } = await params;
+  return <ManagerPicksPageContent managerId={parseInt(id, 10)} />;
 }

@@ -1,6 +1,6 @@
 # FPL Stats - Let's Keep Trying Our Best! 
 
-A static website tracking Fantasy Premier League mini-league **79657** ("Let's Keep Trying Our Best!"). Built with Next.js, TypeScript, and Tailwind CSS, deployed via GitHub Pages.
+A static website tracking Fantasy Premier League mini-league **103278** ("Let's Keep Trying Our Best!") for 2026/27, with a frozen 2025/26 archive. Built with Next.js, TypeScript, and Tailwind CSS, deployed via GitHub Pages.
 
 ## Features
 
@@ -12,7 +12,7 @@ A static website tracking Fantasy Premier League mini-league **79657** ("Let's K
 ## Tech Stack
 
 - **Frontend**: Next.js (App Router, static export), TypeScript, Tailwind CSS, Recharts
-- **Data**: JSON files in `data/`, updated by GitHub Actions
+- **Data**: live JSON in `data/current/`, archived JSON in `data/archives/2025-26/`
 - **Hosting**: GitHub Pages
 - **CI/CD**: Two GitHub Actions workflows (see below)
 
@@ -71,9 +71,10 @@ Open [http://localhost:3000](http://localhost:3000).
 
 Data is fetched from the [FPL API](https://fantasy.premierleague.com/api/) and stored as:
 
-- `data/bootstrap.json` — Gameweeks, teams
-- `data/league.json` — League standings and member list
-- `data/managers/{id}.json` — Per-manager gameweek history and chip usage
+- `data/current/bootstrap.json` — Live-season gameweeks and teams
+- `data/current/league.json` — Live-season standings and member list
+- `data/current/managers/{id}.json` — Live manager histories, chips, and picks
+- `data/archives/2025-26/` — Frozen final 2025/26 snapshot; never written by scheduled refreshes
 
 To fetch manually:
 

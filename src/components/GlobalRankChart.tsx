@@ -42,6 +42,7 @@ function formatRank(rank: number): string {
 interface GlobalRankChartProps {
   managers: ProcessedManager[];
   totalGameweeks: number;
+  managerPathPrefix?: string;
 }
 
 interface GlobalRankTooltipProps {
@@ -112,6 +113,7 @@ function GlobalRankTooltip({
 export default function GlobalRankChart({
   managers,
   totalGameweeks,
+  managerPathPrefix = "/manager",
 }: GlobalRankChartProps) {
   const data = Array.from({ length: totalGameweeks }, (_, i) => {
     const gw = i + 1;
@@ -155,7 +157,7 @@ export default function GlobalRankChart({
               style={{ backgroundColor: CHART_COLORS[i % CHART_COLORS.length] }}
             />
             <Link
-              href={`/manager/${m.entry}`}
+              href={`${managerPathPrefix}/${m.entry}`}
               className="text-xs text-gray-300 hover:text-fpl-green transition-colors"
             >
               {m.entry_name || m.player_name}
