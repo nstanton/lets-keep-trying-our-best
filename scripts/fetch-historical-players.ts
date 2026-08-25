@@ -15,11 +15,13 @@ const POSITION_MAP = {
   4: "FWD",
 } as const;
 
-const HISTORICAL_SEASONS = [
-  { label: "2022/23", slug: "2022-23" },
+const COMPLETED_SEASONS = [
   { label: "2023/24", slug: "2023-24" },
   { label: "2024/25", slug: "2024-25" },
+  { label: "2025/26", slug: "2025-26" },
 ] as const;
+
+const CURRENT_SEASON = "2026/27";
 
 interface HistoricalPlayer {
   web_name: string;
@@ -166,21 +168,28 @@ function extractCurrentSeasonPlayers(
 async function fetchHistoricalPlayers(): Promise<void> {
   await ensureDir(DATA_DIR);
 
+  const existing = await fs
+    .readFile(OUTPUT_PATH, "utf-8")
+    .then((content) => JSON.parse(content) as HistoricalPlayersOutput)
+    .catch(() => ({ seasons: {} } as HistoricalPlayersOutput));
   const output: HistoricalPlayersOutput = { seasons: {} };
 
-  for (const season of HISTORICAL_SEASONS) {
-    const csv = await fetchWithRetry(
-      `${GITHUB_BASE}/${season.slug}/players_raw.csv`
-    );
+  for (const season of COMPLETED_SEASONS) {
+    const savedSeason = existing.seasons[season.label];
+    if (savedSeason) {
+      output.seasons[season.label] = savedSeason;
+      continue;
+    }
+    const csv = await fetchWithRetry(`${GITHUB_BASE}/${season.slug}/players_raw.csv`);
     output.seasons[season.label] = parseHistoricalCsv(csv);
-    console.log(`Fetched historical players for ${season.label}`);
+    console.log(`Seeded completed-season players for ${season.label}`);
   }
 
   const bootstrap = JSON.parse(
-    await fs.readFile(path.join(DATA_DIR, "bootstrap.json"), "utf-8")
+    await fs.readFile(path.join(DATA_DIR, "current", "bootstrap.json"), "utf-8")
   ) as BootstrapResponse;
 
-  output.seasons["2025/26"] = extractCurrentSeasonPlayers(bootstrap);
+  output.seasons[CURRENT_SEASON] = extractCurrentSeasonPlayers(bootstrap);
 
   await fs.writeFile(OUTPUT_PATH, `${JSON.stringify(output, null, 2)}\n`);
   console.log(`Saved historical players to ${OUTPUT_PATH}`);

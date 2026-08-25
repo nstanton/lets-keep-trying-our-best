@@ -6,6 +6,7 @@ import {
   getBootstrapData,
   getLeagueData,
 } from "@/lib/data";
+import { getSeasonConfig, managerPath, LIVE_SEASON, type SeasonKey } from "@/lib/seasons";
 import WeeklyChart from "@/components/WeeklyChart";
 import TransferLog from "@/components/TransferLog";
 import TeamBreakdownTable from "@/components/TeamBreakdownTable";
@@ -50,14 +51,20 @@ export async function generateMetadata({
   };
 }
 
-export default async function ManagerPage({ params }: PageProps) {
-  const { id } = await params;
-  const managerId = parseInt(id, 10);
+export async function ManagerPageContent({
+  managerId,
+  season = LIVE_SEASON,
+}: {
+  managerId: number;
+  season?: SeasonKey;
+}) {
+  const seasonConfig = getSeasonConfig(season);
+  const standingsHref = seasonConfig.routePrefix || "/";
   const [managerData, leagueData, bootstrapData, allManagerIds] = await Promise.all([
-    getManagerData(managerId),
-    getLeagueData(),
-    getBootstrapData(),
-    getAllManagerIds(),
+    getManagerData(managerId, season),
+    getLeagueData(season),
+    getBootstrapData(season),
+    getAllManagerIds(season),
   ]);
   const leagueResults = leagueData?.standings.results ?? [];
 
@@ -69,7 +76,7 @@ export default async function ManagerPage({ params }: PageProps) {
     return (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Link
-          href="/"
+          href={standingsHref}
           className="text-fpl-green hover:underline text-sm mb-4 inline-block"
         >
           &larr; Back to Standings
@@ -98,7 +105,7 @@ export default async function ManagerPage({ params }: PageProps) {
   const allManagersForComparison = await Promise.all(
     allManagerIds.map(async (entry) => ({
       managerId: entry,
-      managerData: await getManagerData(entry),
+      managerData: await getManagerData(entry, season),
     }))
   );
   const managerDataById = new Map(
@@ -178,7 +185,7 @@ export default async function ManagerPage({ params }: PageProps) {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Back link */}
       <Link
-        href="/"
+        href={standingsHref}
         className="text-fpl-green hover:underline text-sm mb-6 inline-block"
       >
         &larr; Back to Standings
@@ -193,7 +200,7 @@ export default async function ManagerPage({ params }: PageProps) {
         <div className="h-1 w-24 bg-fpl-green rounded-full mt-3"></div>
         <div className="mt-4">
           <Link
-            href={`/manager/${managerId}/picks`}
+            href={`${managerPath(season, managerId)}/picks`}
             className="inline-flex items-center rounded-lg border border-fpl-cyan/40 bg-fpl-cyan/10 px-3 py-2 text-sm text-fpl-cyan hover:bg-fpl-cyan/20 transition-colors"
           >
             View Team Picks by Position
@@ -314,4 +321,9 @@ export default async function ManagerPage({ params }: PageProps) {
       )}
     </div>
   );
+}
+
+export default async function ManagerPage({ params }: PageProps) {
+  const { id } = await params;
+  return <ManagerPageContent managerId={parseInt(id, 10)} />;
 }

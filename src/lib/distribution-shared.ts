@@ -1,11 +1,11 @@
 export const POSITIONS = ["GK", "DEF", "MID", "FWD"] as const;
-export const SEASONS = ["2022/23", "2023/24", "2024/25", "2025/26"] as const;
+export const SEASONS = ["2023/24", "2024/25", "2025/26", "2026/27"] as const;
 export const TOP_PLAYER_LIMIT = 20;
 export const SEASON_COLORS: Record<SeasonKey, string> = {
-  "2022/23": "#00ff87",
-  "2023/24": "#e90052",
-  "2024/25": "#963cff",
-  "2025/26": "#05f0ff",
+  "2023/24": "#00ff87",
+  "2024/25": "#e90052",
+  "2025/26": "#963cff",
+  "2026/27": "#05f0ff",
 };
 
 export type PositionKey = (typeof POSITIONS)[number];

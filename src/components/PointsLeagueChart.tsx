@@ -32,6 +32,7 @@ const CHART_COLORS = [
 interface PointsLeagueChartProps {
   managers: ProcessedManager[];
   totalGameweeks: number;
+  managerPathPrefix?: string;
 }
 
 interface PointsLeagueTooltipProps {
@@ -99,6 +100,7 @@ function PointsLeagueTooltip({
 export default function PointsLeagueChart({
   managers,
   totalGameweeks,
+  managerPathPrefix = "/manager",
 }: PointsLeagueChartProps) {
   const data = Array.from({ length: totalGameweeks }, (_, i) => {
     const gw = i + 1;
@@ -142,7 +144,7 @@ export default function PointsLeagueChart({
               style={{ backgroundColor: CHART_COLORS[i % CHART_COLORS.length] }}
             />
             <Link
-              href={`/manager/${m.entry}`}
+              href={`${managerPathPrefix}/${m.entry}`}
               className="text-xs text-gray-300 hover:text-fpl-green transition-colors"
             >
               {m.entry_name || m.player_name}

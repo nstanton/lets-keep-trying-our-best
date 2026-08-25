@@ -29,17 +29,20 @@ jobs:
       - name: Fetch FPL data
         run: npx tsx scripts/fetch-data.ts
 
+      - name: Refresh current-season player distribution
+        run: npx tsx scripts/fetch-historical-players.ts
+
       - name: Check for changes
         id: changes
         run: |
-          git diff --quiet data/ || echo "changed=true" >> $GITHUB_OUTPUT
+          git diff --quiet data/current/ data/historical-players.json || echo "changed=true" >> $GITHUB_OUTPUT
 
       - name: Commit and push data
         if: steps.changes.outputs.changed == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/
+          git add data/current/ data/historical-players.json
           git commit -m "Update FPL data - $(date -u +'%Y-%m-%d %H:%M UTC')"
           git push
 

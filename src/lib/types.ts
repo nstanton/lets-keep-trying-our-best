@@ -43,6 +43,7 @@ export interface ManagerPick {
   is_captain: boolean;
   is_vice_captain: boolean;
   points: number | null;
+  minutes?: number | null;
 }
 
 export type ManagerPicksByEvent = Record<number, ManagerPick[]>;
@@ -113,6 +114,15 @@ export interface BootstrapData {
   events: BootstrapEvent[];
   teams: BootstrapTeam[];
   elements: BootstrapElement[];
+}
+
+export interface FixtureData {
+  event: number;
+  team_a: number;
+  team_h: number;
+  started: boolean;
+  finished: boolean;
+  finished_provisional: boolean;
 }
 
 export interface ProcessedManager {

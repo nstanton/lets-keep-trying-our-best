@@ -130,6 +130,7 @@ export interface EventLiveElement {
   id: number;
   stats: {
     total_points: number;
+    minutes: number;
   };
 }
 
@@ -137,8 +138,18 @@ export interface EventLiveResponse {
   elements: EventLiveElement[];
 }
 
+export interface FixtureResponse {
+  event: number;
+  team_a: number;
+  team_h: number;
+  started: boolean;
+  finished: boolean;
+  finished_provisional: boolean;
+}
+
 export interface ManagerPickWithPoints extends EntryPick {
   points: number | null;
+  minutes: number | null;
 }
 
 export type ManagerPicksByEvent = Record<number, ManagerPickWithPoints[]>;

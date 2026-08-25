@@ -5,6 +5,7 @@ import type {
   BootstrapResponse,
   EventLiveResponse,
   EventPicksResponse,
+  FixtureResponse,
   LeagueResponse,
   LeagueStandingResult,
   ManagerHistoryResponse,
@@ -15,8 +16,8 @@ import type {
 
 // Constants
 const API_BASE = "https://fantasy.premierleague.com/api";
-const LEAGUE_ID = 79657;
-const DATA_DIR = path.join(process.cwd(), "data");
+const LEAGUE_ID = 103278;
+const DATA_DIR = path.join(process.cwd(), "data", "current");
 const MANAGERS_DIR = path.join(DATA_DIR, "managers");
 const DELAY_MS = 250;
 
@@ -52,10 +53,15 @@ async function ensureDir(dir: string): Promise<void> {
   await fs.mkdir(dir, { recursive: true });
 }
 
-async function getLivePointsMapForEvent(
+interface LiveStats {
+  points: number;
+  minutes: number;
+}
+
+async function getLiveStatsMapForEvent(
   event: number,
-  cache: Map<number, Map<number, number>>
-): Promise<Map<number, number>> {
+  cache: Map<number, Map<number, LiveStats>>
+): Promise<Map<number, LiveStats>> {
   const cached = cache.get(event);
   if (cached) return cached;
 
@@ -63,9 +69,12 @@ async function getLivePointsMapForEvent(
     const liveData = await fetchWithRetry<EventLiveResponse>(
       `${API_BASE}/event/${event}/live/`
     );
-    const pointsMap = new Map<number, number>();
+    const pointsMap = new Map<number, LiveStats>();
     for (const element of liveData.elements) {
-      pointsMap.set(element.id, element.stats.total_points);
+      pointsMap.set(element.id, {
+        points: element.stats.total_points,
+        minutes: element.stats.minutes,
+      });
     }
     cache.set(event, pointsMap);
     return pointsMap;
@@ -74,7 +83,7 @@ async function getLivePointsMapForEvent(
       `Could not fetch live points for GW${event}. Continuing with null points.`,
       error
     );
-    const emptyMap = new Map<number, number>();
+    const emptyMap = new Map<number, LiveStats>();
     cache.set(event, emptyMap);
     return emptyMap;
   }
@@ -100,6 +109,16 @@ async function fetchData(): Promise<void> {
   if (currentEvent) {
     console.log(`Current gameweek: ${currentEvent.name} (id: ${currentEvent.id})`);
   }
+
+  const fixtures = currentEvent
+    ? await fetchWithRetry<FixtureResponse[]>(
+        `${API_BASE}/fixtures/?event=${currentEvent.id}`
+      )
+    : [];
+  await fs.writeFile(
+    path.join(DATA_DIR, "fixtures.json"),
+    JSON.stringify(fixtures, null, 2)
+  );
 
   // 2. Fetch league standings with pagination
   let allResults: LeagueStandingResult[] = [];
@@ -137,7 +156,7 @@ async function fetchData(): Promise<void> {
   console.log(`Fetched league standings: ${allResults.length} managers`);
 
   // 3. Fetch history for each manager
-  const livePointsCache = new Map<number, Map<number, number>>();
+  const livePointsCache = new Map<number, Map<number, LiveStats>>();
 
   for (const manager of allResults) {
     await delay(DELAY_MS);
@@ -169,11 +188,11 @@ async function fetchData(): Promise<void> {
       await delay(DELAY_MS);
 
       try {
-        const [picksResponse, livePointsMap] = await Promise.all([
+        const [picksResponse, liveStatsMap] = await Promise.all([
           fetchWithRetry<EventPicksResponse>(
             `${API_BASE}/entry/${manager.entry}/event/${gameweek}/picks/`
           ),
-          getLivePointsMapForEvent(gameweek, livePointsCache),
+          getLiveStatsMapForEvent(gameweek, livePointsCache),
         ]);
 
         picksByEvent[gameweek] = picksResponse.picks.map((pick) => ({
@@ -182,7 +201,8 @@ async function fetchData(): Promise<void> {
           multiplier: pick.multiplier,
           is_captain: pick.is_captain,
           is_vice_captain: pick.is_vice_captain,
-          points: livePointsMap.get(pick.element) ?? null,
+          points: liveStatsMap.get(pick.element)?.points ?? null,
+          minutes: liveStatsMap.get(pick.element)?.minutes ?? null,
         }));
       } catch (error) {
         console.warn(
@@ -207,7 +227,7 @@ async function fetchData(): Promise<void> {
     );
   }
 
-  console.log("Done! Data saved to data/");
+  console.log("Done! Data saved to data/current/");
 }
 
 // Run

@@ -6,7 +6,9 @@ import type {
   ManagerData,
   ProcessedManager,
   GameweekHistory,
+  FixtureData,
 } from "./types";
+import { getSeasonConfig, LIVE_SEASON, type SeasonKey } from "./seasons";
 
 const DATA_DIR = path.join(process.cwd(), "data");
 
@@ -19,30 +21,55 @@ async function readJsonFile<T>(filePath: string): Promise<T | null> {
   }
 }
 
-export async function getBootstrapData(): Promise<BootstrapData | null> {
-  return readJsonFile<BootstrapData>(path.join(DATA_DIR, "bootstrap.json"));
+function getSeasonDataDirectory(season: SeasonKey): string {
+  return path.join(DATA_DIR, getSeasonConfig(season).dataDirectory);
 }
 
-export async function getLeagueData(): Promise<LeagueData | null> {
-  return readJsonFile<LeagueData>(path.join(DATA_DIR, "league.json"));
-}
-
-export async function getManagerData(
-  managerId: number
-): Promise<ManagerData | null> {
-  return readJsonFile<ManagerData>(
-    path.join(DATA_DIR, "managers", `${managerId}.json`)
+export async function getBootstrapData(
+  season: SeasonKey = LIVE_SEASON
+): Promise<BootstrapData | null> {
+  return readJsonFile<BootstrapData>(
+    path.join(getSeasonDataDirectory(season), "bootstrap.json")
   );
 }
 
-export async function getAllManagerIds(): Promise<number[]> {
-  const league = await getLeagueData();
+export async function getLeagueData(
+  season: SeasonKey = LIVE_SEASON
+): Promise<LeagueData | null> {
+  return readJsonFile<LeagueData>(
+    path.join(getSeasonDataDirectory(season), "league.json")
+  );
+}
+
+export async function getFixtureData(
+  season: SeasonKey = LIVE_SEASON
+): Promise<FixtureData[] | null> {
+  return readJsonFile<FixtureData[]>(
+    path.join(getSeasonDataDirectory(season), "fixtures.json")
+  );
+}
+
+export async function getManagerData(
+  managerId: number,
+  season: SeasonKey = LIVE_SEASON
+): Promise<ManagerData | null> {
+  return readJsonFile<ManagerData>(
+    path.join(getSeasonDataDirectory(season), "managers", `${managerId}.json`)
+  );
+}
+
+export async function getAllManagerIds(
+  season: SeasonKey = LIVE_SEASON
+): Promise<number[]> {
+  const league = await getLeagueData(season);
   if (!league) return [];
   return league.standings.results.map((r) => r.entry);
 }
 
-export async function getCurrentGameweek(): Promise<number> {
-  const bootstrap = await getBootstrapData();
+export async function getCurrentGameweek(
+  season: SeasonKey = LIVE_SEASON
+): Promise<number> {
+  const bootstrap = await getBootstrapData(season);
   if (!bootstrap || bootstrap.events.length === 0) return 1;
 
   // Find the current gameweek
@@ -56,14 +83,16 @@ export async function getCurrentGameweek(): Promise<number> {
   return 1;
 }
 
-export async function getProcessedManagers(): Promise<ProcessedManager[]> {
-  const league = await getLeagueData();
+export async function getProcessedManagers(
+  season: SeasonKey = LIVE_SEASON
+): Promise<ProcessedManager[]> {
+  const league = await getLeagueData(season);
   if (!league) return [];
 
   const managers: ProcessedManager[] = [];
 
   for (const standing of league.standings.results) {
-    const managerData = await getManagerData(standing.entry);
+    const managerData = await getManagerData(standing.entry, season);
 
     managers.push({
       entry: standing.entry,

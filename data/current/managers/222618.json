@@ -1,0 +1,210 @@
+{
+  "current": [
+    {
+      "event": 1,
+      "points": 50,
+      "total_points": 50,
+      "rank": 3750349,
+      "rank_sort": 3756609,
+      "overall_rank": 3750344,
+      "percentile_rank": 45,
+      "overall_rank_percentage": "42",
+      "bank": 0,
+      "value": 1000,
+      "event_transfers": 0,
+      "event_transfers_cost": 0,
+      "points_on_bench": 11
+    }
+  ],
+  "past": [
+    {
+      "season_name": "2018/19",
+      "total_points": 2318,
+      "rank": 42358,
+      "rank_percentage": "0.7"
+    },
+    {
+      "season_name": "2019/20",
+      "total_points": 2218,
+      "rank": 226730,
+      "rank_percentage": "3"
+    },
+    {
+      "season_name": "2020/21",
+      "total_points": 2266,
+      "rank": 518821,
+      "rank_percentage": "6"
+    },
+    {
+      "season_name": "2021/22",
+      "total_points": 2496,
+      "rank": 112121,
+      "rank_percentage": "1"
+    },
+    {
+      "season_name": "2022/23",
+      "total_points": 2454,
+      "rank": 348742,
+      "rank_percentage": "3"
+    },
+    {
+      "season_name": "2023/24",
+      "total_points": 2506,
+      "rank": 66780,
+      "rank_percentage": "0.6"
+    },
+    {
+      "season_name": "2024/25",
+      "total_points": 2531,
+      "rank": 66044,
+      "rank_percentage": "0.6"
+    },
+    {
+      "season_name": "2025/26",
+      "total_points": 2161,
+      "rank": 1361945,
+      "rank_percentage": "10"
+    }
+  ],
+  "chips": [],
+  "picks_by_event": {
+    "1": [
+      {
+        "element": 1,
+        "position": 1,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 6,
+        "minutes": 90
+      },
+      {
+        "element": 391,
+        "position": 2,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 9,
+        "minutes": 90
+      },
+      {
+        "element": 8,
+        "position": 3,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 9,
+        "minutes": 80
+      },
+      {
+        "element": 423,
+        "position": 4,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 1,
+        "minutes": 90
+      },
+      {
+        "element": 469,
+        "position": 5,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 2,
+        "minutes": 90
+      },
+      {
+        "element": 426,
+        "position": 6,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": true,
+        "points": 2,
+        "minutes": 90
+      },
+      {
+        "element": 427,
+        "position": 7,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 2,
+        "minutes": 90
+      },
+      {
+        "element": 366,
+        "position": 8,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 2,
+        "minutes": 62
+      },
+      {
+        "element": 411,
+        "position": 9,
+        "multiplier": 2,
+        "is_captain": true,
+        "is_vice_captain": false,
+        "points": 2,
+        "minutes": 90
+      },
+      {
+        "element": 165,
+        "position": 10,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 11,
+        "minutes": 90
+      },
+      {
+        "element": 491,
+        "position": 11,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 2,
+        "minutes": 90
+      },
+      {
+        "element": 301,
+        "position": 12,
+        "multiplier": 0,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0,
+        "minutes": 0
+      },
+      {
+        "element": 51,
+        "position": 13,
+        "multiplier": 0,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 2,
+        "minutes": 90
+      },
+      {
+        "element": 290,
+        "position": 14,
+        "multiplier": 0,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 6,
+        "minutes": 90
+      },
+      {
+        "element": 173,
+        "position": 15,
+        "multiplier": 0,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 3,
+        "minutes": 90
+      }
+    ]
+  },
+  "transfers": []
+}

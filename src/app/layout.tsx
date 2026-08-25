@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "FPL Stats - Let's Keep Trying Our Best!",
-  description: "Fantasy Premier League mini-league stats tracker for league 79657",
+  description: "Fantasy Premier League mini-league stats tracker for the 2026/27 season",
 };
 
 export default function RootLayout({

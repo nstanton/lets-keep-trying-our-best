@@ -20,6 +20,9 @@ export default function Header() {
                 <Link href="/distribution" className="text-gray-300 hover:text-white text-sm font-medium transition-colors">
                   Distribution
                 </Link>
+                <Link href="/archive/2025-26" className="text-gray-300 hover:text-white text-sm font-medium transition-colors">
+                  2025/26 Archive
+                </Link>
                 <Link href="#about" className="text-gray-300 hover:text-white text-sm font-medium transition-colors">
                   About
                 </Link>
