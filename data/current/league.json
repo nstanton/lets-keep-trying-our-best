@@ -31,25 +31,36 @@
       },
       {
         "club_badge_src": null,
+        "entry": 1842720,
+        "entry_name": "dated vibes",
+        "event_total": 53,
+        "last_rank": 0,
+        "player_name": "Nathan Stanton",
+        "rank": 2,
+        "rank_sort": 2,
+        "total": 53
+      },
+      {
+        "club_badge_src": null,
         "entry": 222618,
         "entry_name": "WolvesChamps2027",
         "event_total": 50,
         "last_rank": 0,
         "player_name": "Blake Lowell",
-        "rank": 2,
-        "rank_sort": 2,
+        "rank": 3,
+        "rank_sort": 3,
         "total": 50
       },
       {
         "club_badge_src": null,
-        "entry": 1842720,
-        "entry_name": "dated vibes",
-        "event_total": 44,
+        "entry": 8747478,
+        "entry_name": "10daGavea",
+        "event_total": 39,
         "last_rank": 0,
-        "player_name": "Nathan Stanton",
-        "rank": 3,
-        "rank_sort": 3,
-        "total": 44
+        "player_name": "Davi Parente",
+        "rank": 4,
+        "rank_sort": 4,
+        "total": 39
       },
       {
         "club_badge_src": null,
@@ -58,24 +69,13 @@
         "event_total": 38,
         "last_rank": 0,
         "player_name": "Robert Norman",
-        "rank": 4,
-        "rank_sort": 4,
-        "total": 38
-      },
-      {
-        "club_badge_src": null,
-        "entry": 8747478,
-        "entry_name": "10daGavea",
-        "event_total": 37,
-        "last_rank": 0,
-        "player_name": "Davi Parente",
         "rank": 5,
         "rank_sort": 5,
-        "total": 37
+        "total": 38
       }
     ]
   },
-  "last_updated_data": "2026-08-25T06:28:04Z",
+  "last_updated_data": "2026-08-25T19:21:09Z",
   "new_entries": {
     "has_next": false,
     "page": 1,
