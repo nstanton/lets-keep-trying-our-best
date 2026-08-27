@@ -1,84 +1,94 @@
 {
+  "new_entries": {
+    "has_next": false,
+    "page": 1,
+    "results": []
+  },
+  "last_updated_data": "2026-08-25T08:13:16Z",
   "league": {
-    "admin_entry": 241051,
-    "closed": false,
-    "code_privacy": "p",
-    "created": "2026-07-23T19:09:07.376435Z",
-    "cup_league": null,
-    "has_cup": true,
     "id": 103278,
-    "league_type": "x",
-    "max_entries": null,
     "name": "Let's Keep Trying Our Best!",
-    "rank": null,
+    "created": "2026-07-23T19:09:07.376435Z",
+    "closed": false,
+    "max_entries": null,
+    "league_type": "x",
     "scoring": "c",
-    "start_event": 1
+    "admin_entry": 241051,
+    "start_event": 1,
+    "code_privacy": "p",
+    "has_cup": true,
+    "cup_league": null,
+    "rank": null
   },
   "standings": {
     "has_next": false,
     "page": 1,
     "results": [
       {
-        "club_badge_src": null,
-        "entry": 241051,
-        "entry_name": "Isak My Socks Off",
+        "id": 3054635,
         "event_total": 55,
-        "last_rank": 0,
         "player_name": "Nate Jones",
         "rank": 1,
+        "last_rank": 0,
         "rank_sort": 1,
-        "total": 55
+        "total": 55,
+        "entry": 241051,
+        "entry_name": "Isak My Socks Off",
+        "has_played": true,
+        "club_badge_src": null
       },
       {
-        "club_badge_src": null,
-        "entry": 1842720,
-        "entry_name": "dated vibes",
+        "id": 10815178,
         "event_total": 53,
-        "last_rank": 0,
         "player_name": "Nathan Stanton",
         "rank": 2,
+        "last_rank": 0,
         "rank_sort": 2,
-        "total": 53
+        "total": 53,
+        "entry": 1842720,
+        "entry_name": "dated vibes",
+        "has_played": true,
+        "club_badge_src": null
       },
       {
-        "club_badge_src": null,
-        "entry": 222618,
-        "entry_name": "WolvesChamps2027",
+        "id": 3054657,
         "event_total": 50,
-        "last_rank": 0,
         "player_name": "Blake Lowell",
         "rank": 3,
+        "last_rank": 0,
         "rank_sort": 3,
-        "total": 50
+        "total": 50,
+        "entry": 222618,
+        "entry_name": "WolvesChamps2027",
+        "has_played": true,
+        "club_badge_src": null
       },
       {
-        "club_badge_src": null,
-        "entry": 8747478,
-        "entry_name": "10daGavea",
+        "id": 65367438,
         "event_total": 39,
-        "last_rank": 0,
         "player_name": "Davi Parente",
         "rank": 4,
+        "last_rank": 0,
         "rank_sort": 4,
-        "total": 39
+        "total": 39,
+        "entry": 8747478,
+        "entry_name": "10daGavea",
+        "has_played": true,
+        "club_badge_src": null
       },
       {
-        "club_badge_src": null,
-        "entry": 216287,
-        "entry_name": "Haaland a Handbasket",
+        "id": 3054642,
         "event_total": 38,
-        "last_rank": 0,
         "player_name": "Robert Norman",
         "rank": 5,
+        "last_rank": 0,
         "rank_sort": 5,
-        "total": 38
+        "total": 38,
+        "entry": 216287,
+        "entry_name": "Haaland a Handbasket",
+        "has_played": true,
+        "club_badge_src": null
       }
     ]
-  },
-  "last_updated_data": "2026-08-25T19:21:09Z",
-  "new_entries": {
-    "has_next": false,
-    "page": 1,
-    "results": []
   }
 }
