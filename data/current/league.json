@@ -22,60 +22,60 @@
         "club_badge_src": null,
         "entry": 1842720,
         "entry_name": "dated vibes",
-        "event_total": 33,
+        "event_total": 46,
         "last_rank": 2,
         "player_name": "Nathan Stanton",
         "rank": 1,
         "rank_sort": 1,
-        "total": 86
-      },
-      {
-        "club_badge_src": null,
-        "entry": 8747478,
-        "entry_name": "10daGavea",
-        "event_total": 44,
-        "last_rank": 4,
-        "player_name": "Davi Parente",
-        "rank": 2,
-        "rank_sort": 2,
-        "total": 83
-      },
-      {
-        "club_badge_src": null,
-        "entry": 241051,
-        "entry_name": "Isak My Socks Off",
-        "event_total": 19,
-        "last_rank": 1,
-        "player_name": "Nate Jones",
-        "rank": 3,
-        "rank_sort": 3,
-        "total": 74
-      },
-      {
-        "club_badge_src": null,
-        "entry": 222618,
-        "entry_name": "WolvesChamps2027",
-        "event_total": 20,
-        "last_rank": 3,
-        "player_name": "Blake Lowell",
-        "rank": 4,
-        "rank_sort": 4,
-        "total": 70
+        "total": 99
       },
       {
         "club_badge_src": null,
         "entry": 216287,
         "entry_name": "Haaland a Handbasket",
-        "event_total": 28,
+        "event_total": 51,
         "last_rank": 5,
         "player_name": "Robert Norman",
+        "rank": 2,
+        "rank_sort": 2,
+        "total": 89
+      },
+      {
+        "club_badge_src": null,
+        "entry": 241051,
+        "entry_name": "Isak My Socks Off",
+        "event_total": 30,
+        "last_rank": 1,
+        "player_name": "Nate Jones",
+        "rank": 3,
+        "rank_sort": 3,
+        "total": 85
+      },
+      {
+        "club_badge_src": null,
+        "entry": 8747478,
+        "entry_name": "10daGavea",
+        "event_total": 46,
+        "last_rank": 4,
+        "player_name": "Davi Parente",
+        "rank": 4,
+        "rank_sort": 4,
+        "total": 85
+      },
+      {
+        "club_badge_src": null,
+        "entry": 222618,
+        "entry_name": "WolvesChamps2027",
+        "event_total": 31,
+        "last_rank": 3,
+        "player_name": "Blake Lowell",
         "rank": 5,
         "rank_sort": 5,
-        "total": 66
+        "total": 81
       }
     ]
   },
-  "last_updated_data": "2026-08-29T11:58:14Z",
+  "last_updated_data": "2026-08-30T10:54:04Z",
   "new_entries": {
     "has_next": false,
     "page": 1,
