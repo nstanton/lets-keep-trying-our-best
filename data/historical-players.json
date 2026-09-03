@@ -9182,7 +9182,7 @@
           "points_per_game": 4
         },
         {
-          "web_name": "Angulo",
+          "web_name": "N.Angulo",
           "total_points": 8,
           "points_per_game": 4
         },
@@ -9662,11 +9662,6 @@
           "points_per_game": 1
         },
         {
-          "web_name": "Enzo",
-          "total_points": 1,
-          "points_per_game": 1
-        },
-        {
           "web_name": "Estêvão",
           "total_points": 1,
           "points_per_game": 1
@@ -9702,7 +9697,7 @@
           "points_per_game": 1
         },
         {
-          "web_name": "Iroegbunam",
+          "web_name": "Grealish",
           "total_points": 1,
           "points_per_game": 1
         },
@@ -9713,6 +9708,11 @@
         },
         {
           "web_name": "Smith Rowe",
+          "total_points": 1,
+          "points_per_game": 1
+        },
+        {
+          "web_name": "Iroegbunam",
           "total_points": 1,
           "points_per_game": 1
         },
@@ -9762,7 +9762,7 @@
           "points_per_game": 1
         },
         {
-          "web_name": "Grealish",
+          "web_name": "Enzo",
           "total_points": 1,
           "points_per_game": 1
         },
