@@ -22,30 +22,30 @@
         "club_badge_src": null,
         "entry": 241051,
         "entry_name": "Isak My Socks Off",
-        "event_total": 123,
+        "event_total": 3,
         "last_rank": 1,
         "player_name": "Nate Jones",
         "rank": 1,
         "rank_sort": 1,
-        "total": 178
+        "total": 181
       },
       {
         "club_badge_src": null,
         "entry": 222618,
         "entry_name": "WolvesChamps2027",
-        "event_total": 116,
-        "last_rank": 3,
+        "event_total": 3,
+        "last_rank": 2,
         "player_name": "Blake Lowell",
         "rank": 2,
         "rank_sort": 2,
-        "total": 166
+        "total": 169
       },
       {
         "club_badge_src": null,
         "entry": 1842720,
         "entry_name": "dated vibes",
-        "event_total": 89,
-        "last_rank": 2,
+        "event_total": 0,
+        "last_rank": 3,
         "player_name": "Nathan Stanton",
         "rank": 3,
         "rank_sort": 3,
@@ -55,7 +55,7 @@
         "club_badge_src": null,
         "entry": 8747478,
         "entry_name": "10daGavea",
-        "event_total": 83,
+        "event_total": 0,
         "last_rank": 4,
         "player_name": "Davi Parente",
         "rank": 4,
@@ -66,16 +66,16 @@
         "club_badge_src": null,
         "entry": 216287,
         "entry_name": "Haaland a Handbasket",
-        "event_total": 71,
+        "event_total": 3,
         "last_rank": 5,
         "player_name": "Robert Norman",
         "rank": 5,
         "rank_sort": 5,
-        "total": 109
+        "total": 112
       }
     ]
   },
-  "last_updated_data": "2026-09-04T10:09:11Z",
+  "last_updated_data": "2026-09-05T09:39:14Z",
   "new_entries": {
     "has_next": false,
     "page": 1,

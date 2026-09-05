@@ -29,6 +29,21 @@
       "event_transfers": 0,
       "event_transfers_cost": 0,
       "points_on_bench": 10
+    },
+    {
+      "event": 3,
+      "points": 3,
+      "total_points": 169,
+      "rank": 5830797,
+      "rank_sort": 5851092,
+      "overall_rank": 898639,
+      "percentile_rank": 60,
+      "overall_rank_percentage": "9",
+      "bank": 3,
+      "value": 1004,
+      "event_transfers": 1,
+      "event_transfers_cost": 0,
+      "points_on_bench": 0
     }
   ],
   "past": [
@@ -81,7 +96,13 @@
       "rank_percentage": "10"
     }
   ],
-  "chips": [],
+  "chips": [
+    {
+      "name": "3xc",
+      "time": "2026-09-03T21:42:58.717699Z",
+      "event": 3
+    }
+  ],
   "picks_by_event": {
     "1": [
       {
@@ -356,7 +377,154 @@
         "points": 2,
         "minutes": 70
       }
+    ],
+    "3": [
+      {
+        "element": 1,
+        "position": 1,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0,
+        "minutes": 0
+      },
+      {
+        "element": 391,
+        "position": 2,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0,
+        "minutes": 0
+      },
+      {
+        "element": 8,
+        "position": 3,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0,
+        "minutes": 0
+      },
+      {
+        "element": 423,
+        "position": 4,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0,
+        "minutes": 0
+      },
+      {
+        "element": 469,
+        "position": 5,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0,
+        "minutes": 0
+      },
+      {
+        "element": 426,
+        "position": 6,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": true,
+        "points": 0,
+        "minutes": 0
+      },
+      {
+        "element": 399,
+        "position": 7,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0,
+        "minutes": 0
+      },
+      {
+        "element": 366,
+        "position": 8,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 3,
+        "minutes": 90
+      },
+      {
+        "element": 411,
+        "position": 9,
+        "multiplier": 3,
+        "is_captain": true,
+        "is_vice_captain": false,
+        "points": 0,
+        "minutes": 0
+      },
+      {
+        "element": 165,
+        "position": 10,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0,
+        "minutes": 0
+      },
+      {
+        "element": 491,
+        "position": 11,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0,
+        "minutes": 0
+      },
+      {
+        "element": 301,
+        "position": 12,
+        "multiplier": 0,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0,
+        "minutes": 0
+      },
+      {
+        "element": 290,
+        "position": 13,
+        "multiplier": 0,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0,
+        "minutes": 0
+      },
+      {
+        "element": 51,
+        "position": 14,
+        "multiplier": 0,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0,
+        "minutes": 0
+      },
+      {
+        "element": 173,
+        "position": 15,
+        "multiplier": 0,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0,
+        "minutes": 0
+      }
     ]
   },
-  "transfers": []
+  "transfers": [
+    {
+      "element_in": 399,
+      "element_in_cost": 77,
+      "element_out": 427,
+      "element_out_cost": 80,
+      "entry": 222618,
+      "event": 3,
+      "time": "2026-09-03T21:41:29.774525Z"
+    }
+  ]
 }
