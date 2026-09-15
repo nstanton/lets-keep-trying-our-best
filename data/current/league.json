@@ -22,12 +22,12 @@
         "club_badge_src": null,
         "entry": 241051,
         "entry_name": "Isak My Socks Off",
-        "event_total": 84,
+        "event_total": 94,
         "last_rank": 1,
         "player_name": "Nate Jones",
         "rank": 1,
         "rank_sort": 1,
-        "total": 313
+        "total": 323
       },
       {
         "club_badge_src": null,
@@ -44,12 +44,12 @@
         "club_badge_src": null,
         "entry": 1842720,
         "entry_name": "dated vibes",
-        "event_total": 74,
+        "event_total": 76,
         "last_rank": 3,
         "player_name": "Nathan Stanton",
         "rank": 3,
         "rank_sort": 3,
-        "total": 274
+        "total": 276
       },
       {
         "club_badge_src": null,
@@ -66,16 +66,16 @@
         "club_badge_src": null,
         "entry": 8747478,
         "entry_name": "10daGavea",
-        "event_total": 54,
+        "event_total": 64,
         "last_rank": 4,
         "player_name": "Davi Parente",
         "rank": 5,
         "rank_sort": 5,
-        "total": 224
+        "total": 234
       }
     ]
   },
-  "last_updated_data": "2026-09-14T11:14:32Z",
+  "last_updated_data": "2026-09-15T10:41:07Z",
   "new_entries": {
     "has_next": false,
     "page": 1,
