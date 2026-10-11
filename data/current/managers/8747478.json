@@ -77,18 +77,18 @@
     },
     {
       "event": 6,
-      "points": 0,
-      "total_points": 285,
-      "rank": null,
-      "rank_sort": null,
-      "overall_rank": 5847270,
-      "percentile_rank": null,
-      "overall_rank_percentage": null,
+      "points": 39,
+      "total_points": 324,
+      "rank": 4970388,
+      "rank_sort": 5016484,
+      "overall_rank": 5509107,
+      "percentile_rank": 50,
+      "overall_rank_percentage": "50",
       "bank": 1,
       "value": 999,
       "event_transfers": 1,
       "event_transfers_cost": 0,
-      "points_on_bench": 0
+      "points_on_bench": 2
     }
   ],
   "past": [
@@ -817,8 +817,8 @@
         "multiplier": 1,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 0,
-        "minutes": 0
+        "points": 9,
+        "minutes": 90
       },
       {
         "element": 388,
@@ -835,8 +835,8 @@
         "multiplier": 1,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 1,
-        "minutes": 4
+        "points": 9,
+        "minutes": 81
       },
       {
         "element": 204,
@@ -862,8 +862,8 @@
         "multiplier": 1,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 0,
-        "minutes": 0
+        "points": 1,
+        "minutes": 90
       },
       {
         "element": 40,
@@ -871,8 +871,8 @@
         "multiplier": 2,
         "is_captain": true,
         "is_vice_captain": false,
-        "points": 0,
-        "minutes": 0
+        "points": 9,
+        "minutes": 83
       },
       {
         "element": 399,
@@ -907,8 +907,8 @@
         "multiplier": 1,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 1,
-        "minutes": 4
+        "points": 2,
+        "minutes": 90
       },
       {
         "element": 58,
@@ -934,8 +934,8 @@
         "multiplier": 0,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 0,
-        "minutes": 0
+        "points": 2,
+        "minutes": 90
       },
       {
         "element": 175,
