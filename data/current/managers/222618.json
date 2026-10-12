@@ -77,18 +77,18 @@
     },
     {
       "event": 6,
-      "points": 35,
-      "total_points": 379,
-      "rank": 5843280,
-      "rank_sort": 5845293,
-      "overall_rank": 1704259,
-      "percentile_rank": 55,
-      "overall_rank_percentage": "16",
+      "points": 64,
+      "total_points": 408,
+      "rank": 2851476,
+      "rank_sort": 2854539,
+      "overall_rank": 1042121,
+      "percentile_rank": 30,
+      "overall_rank_percentage": "10",
       "bank": 1,
       "value": 1010,
       "event_transfers": 0,
       "event_transfers_cost": 0,
-      "points_on_bench": 2
+      "points_on_bench": 6
     }
   ],
   "past": [
@@ -855,8 +855,8 @@
         "multiplier": 1,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 0,
-        "minutes": 0
+        "points": 4,
+        "minutes": 24
       },
       {
         "element": 8,
@@ -882,8 +882,8 @@
         "multiplier": 1,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 0,
-        "minutes": 0
+        "points": 1,
+        "minutes": 90
       },
       {
         "element": 40,
@@ -900,8 +900,8 @@
         "multiplier": 1,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 0,
-        "minutes": 0
+        "points": 10,
+        "minutes": 90
       },
       {
         "element": 154,
@@ -918,8 +918,8 @@
         "multiplier": 1,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 0,
-        "minutes": 0
+        "points": 2,
+        "minutes": 90
       },
       {
         "element": 411,
@@ -927,8 +927,8 @@
         "multiplier": 2,
         "is_captain": true,
         "is_vice_captain": false,
-        "points": 0,
-        "minutes": 0
+        "points": 6,
+        "minutes": 79
       },
       {
         "element": 569,
@@ -954,8 +954,8 @@
         "multiplier": 0,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 0,
-        "minutes": 0
+        "points": 1,
+        "minutes": 90
       },
       {
         "element": 295,
@@ -963,8 +963,8 @@
         "multiplier": 0,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 0,
-        "minutes": 0
+        "points": 1,
+        "minutes": 90
       },
       {
         "element": 290,
@@ -972,8 +972,8 @@
         "multiplier": 0,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 0,
-        "minutes": 0
+        "points": 2,
+        "minutes": 74
       }
     ]
   },
