@@ -8319,8 +8319,8 @@
         },
         {
           "web_name": "Kinsky",
-          "total_points": 21,
-          "points_per_game": 3.5
+          "total_points": 23,
+          "points_per_game": 3.3
         },
         {
           "web_name": "Martinez",
@@ -8329,8 +8329,8 @@
         },
         {
           "web_name": "Rushworth",
-          "total_points": 19,
-          "points_per_game": 3.2
+          "total_points": 20,
+          "points_per_game": 2.9
         },
         {
           "web_name": "Sels",
@@ -8460,12 +8460,22 @@
           "points_per_game": 5.3
         },
         {
+          "web_name": "Thomas",
+          "total_points": 31,
+          "points_per_game": 4.4
+        },
+        {
           "web_name": "Branthwaite",
           "total_points": 31,
           "points_per_game": 4.4
         },
         {
           "web_name": "Egan",
+          "total_points": 31,
+          "points_per_game": 4.4
+        },
+        {
+          "web_name": "Van Hecke",
           "total_points": 31,
           "points_per_game": 4.4
         },
@@ -8500,11 +8510,6 @@
           "points_per_game": 4.7
         },
         {
-          "web_name": "Thomas",
-          "total_points": 28,
-          "points_per_game": 4.7
-        },
-        {
           "web_name": "Mitchell",
           "total_points": 28,
           "points_per_game": 4
@@ -8535,11 +8540,6 @@
           "points_per_game": 3.9
         },
         {
-          "web_name": "Van Hecke",
-          "total_points": 27,
-          "points_per_game": 4.5
-        },
-        {
           "web_name": "Maitland-Niles",
           "total_points": 26,
           "points_per_game": 5.2
@@ -8562,7 +8562,7 @@
         {
           "web_name": "Dasilva",
           "total_points": 25,
-          "points_per_game": 4.2
+          "points_per_game": 3.6
         },
         {
           "web_name": "Bassey",
@@ -8598,6 +8598,11 @@
           "web_name": "Schuster",
           "total_points": 22,
           "points_per_game": 5.5
+        },
+        {
+          "web_name": "Robertson",
+          "total_points": 22,
+          "points_per_game": 3.7
         },
         {
           "web_name": "Hill",
@@ -8660,6 +8665,11 @@
           "points_per_game": 3.8
         },
         {
+          "web_name": "Van de Ven",
+          "total_points": 19,
+          "points_per_game": 3.2
+        },
+        {
           "web_name": "Mukiele",
           "total_points": 19,
           "points_per_game": 3.2
@@ -8670,6 +8680,11 @@
           "points_per_game": 3
         },
         {
+          "web_name": "Pinnock",
+          "total_points": 17,
+          "points_per_game": 2.8
+        },
+        {
           "web_name": "Coyle",
           "total_points": 17,
           "points_per_game": 2.4
@@ -8678,21 +8693,6 @@
           "web_name": "Diop",
           "total_points": 17,
           "points_per_game": 2.4
-        },
-        {
-          "web_name": "Robertson",
-          "total_points": 17,
-          "points_per_game": 3.4
-        },
-        {
-          "web_name": "Van de Ven",
-          "total_points": 17,
-          "points_per_game": 3.4
-        },
-        {
-          "web_name": "Pinnock",
-          "total_points": 16,
-          "points_per_game": 3.2
         },
         {
           "web_name": "Elvedi",
@@ -8750,6 +8750,11 @@
           "points_per_game": 2.2
         },
         {
+          "web_name": "van Ewijk",
+          "total_points": 13,
+          "points_per_game": 2.2
+        },
+        {
           "web_name": "Mfuni",
           "total_points": 13,
           "points_per_game": 6.5
@@ -8778,11 +8783,6 @@
           "web_name": "Mosquera",
           "total_points": 12,
           "points_per_game": 6
-        },
-        {
-          "web_name": "van Ewijk",
-          "total_points": 12,
-          "points_per_game": 2.4
         },
         {
           "web_name": "Canvot",
@@ -8910,6 +8910,11 @@
           "points_per_game": 3.5
         },
         {
+          "web_name": "Davies",
+          "total_points": 7,
+          "points_per_game": 7
+        },
+        {
           "web_name": "Ruggeri",
           "total_points": 6,
           "points_per_game": 1.5
@@ -9025,6 +9030,11 @@
           "points_per_game": 1
         },
         {
+          "web_name": "Tosin",
+          "total_points": 3,
+          "points_per_game": 1.5
+        },
+        {
           "web_name": "Svoboda",
           "total_points": 2,
           "points_per_game": 1
@@ -9100,6 +9110,11 @@
           "points_per_game": 1
         },
         {
+          "web_name": "Kesler-Hayden",
+          "total_points": 1,
+          "points_per_game": 1
+        },
+        {
           "web_name": "Latibeaudiere",
           "total_points": 1,
           "points_per_game": 1
@@ -9156,11 +9171,6 @@
         },
         {
           "web_name": "Braithwaite",
-          "total_points": 1,
-          "points_per_game": 1
-        },
-        {
-          "web_name": "Tosin",
           "total_points": 1,
           "points_per_game": 1
         },
@@ -9332,6 +9342,11 @@
           "points_per_game": 4
         },
         {
+          "web_name": "Rudoni",
+          "total_points": 26,
+          "points_per_game": 3.7
+        },
+        {
           "web_name": "Munoz",
           "total_points": 26,
           "points_per_game": 3.7
@@ -9353,6 +9368,11 @@
         },
         {
           "web_name": "Ndoye",
+          "total_points": 25,
+          "points_per_game": 3.6
+        },
+        {
+          "web_name": "Tonali",
           "total_points": 25,
           "points_per_game": 3.6
         },
@@ -9440,16 +9460,6 @@
           "web_name": "Szoboszlai",
           "total_points": 21,
           "points_per_game": 3.5
-        },
-        {
-          "web_name": "Tonali",
-          "total_points": 21,
-          "points_per_game": 3.5
-        },
-        {
-          "web_name": "Rudoni",
-          "total_points": 20,
-          "points_per_game": 3.3
         },
         {
           "web_name": "Armstrong",
@@ -9572,12 +9582,22 @@
           "points_per_game": 2.7
         },
         {
+          "web_name": "Kudus",
+          "total_points": 16,
+          "points_per_game": 2.7
+        },
+        {
           "web_name": "Rayan",
           "total_points": 15,
           "points_per_game": 2.1
         },
         {
           "web_name": "Yarmoliuk",
+          "total_points": 15,
+          "points_per_game": 2.1
+        },
+        {
+          "web_name": "Grimes",
           "total_points": 15,
           "points_per_game": 2.1
         },
@@ -9607,19 +9627,19 @@
           "points_per_game": 2
         },
         {
-          "web_name": "Lavia",
-          "total_points": 13,
-          "points_per_game": 2.2
+          "web_name": "Gray",
+          "total_points": 14,
+          "points_per_game": 2.3
         },
         {
-          "web_name": "Grimes",
+          "web_name": "Lavia",
           "total_points": 13,
           "points_per_game": 2.2
         },
         {
           "web_name": "Yirenkyi",
           "total_points": 13,
-          "points_per_game": 2.2
+          "points_per_game": 1.9
         },
         {
           "web_name": "Palacios",
@@ -9637,9 +9657,19 @@
           "points_per_game": 2.6
         },
         {
+          "web_name": "Maddison",
+          "total_points": 13,
+          "points_per_game": 2.6
+        },
+        {
           "web_name": "Bentancur",
           "total_points": 13,
           "points_per_game": 2.2
+        },
+        {
+          "web_name": "Gallagher",
+          "total_points": 13,
+          "points_per_game": 2.6
         },
         {
           "web_name": "Barkley",
@@ -9657,16 +9687,6 @@
           "points_per_game": 2
         },
         {
-          "web_name": "Gallagher",
-          "total_points": 12,
-          "points_per_game": 3
-        },
-        {
-          "web_name": "Gray",
-          "total_points": 12,
-          "points_per_game": 2.4
-        },
-        {
           "web_name": "Lewis-Skelly",
           "total_points": 11,
           "points_per_game": 2.2
@@ -9675,6 +9695,11 @@
           "web_name": "Cook",
           "total_points": 11,
           "points_per_game": 1.6
+        },
+        {
+          "web_name": "Onyeka",
+          "total_points": 11,
+          "points_per_game": 1.8
         },
         {
           "web_name": "Hackney",
@@ -9695,11 +9720,6 @@
           "web_name": "Christie",
           "total_points": 10,
           "points_per_game": 1.7
-        },
-        {
-          "web_name": "Onyeka",
-          "total_points": 10,
-          "points_per_game": 2
         },
         {
           "web_name": "Lerma",
@@ -9732,11 +9752,6 @@
           "points_per_game": 2.5
         },
         {
-          "web_name": "Kudus",
-          "total_points": 10,
-          "points_per_game": 2
-        },
-        {
           "web_name": "Madueke",
           "total_points": 9,
           "points_per_game": 2.2
@@ -9762,19 +9777,29 @@
           "points_per_game": 1.3
         },
         {
+          "web_name": "Mason-Clark",
+          "total_points": 9,
+          "points_per_game": 1.5
+        },
+        {
           "web_name": "Cho",
           "total_points": 9,
           "points_per_game": 2.2
         },
         {
+          "web_name": "Tel",
+          "total_points": 9,
+          "points_per_game": 1.8
+        },
+        {
+          "web_name": "Fernandes",
+          "total_points": 9,
+          "points_per_game": 1.3
+        },
+        {
           "web_name": "Jensen",
           "total_points": 8,
           "points_per_game": 2.7
-        },
-        {
-          "web_name": "Mason-Clark",
-          "total_points": 8,
-          "points_per_game": 1.6
         },
         {
           "web_name": "Röhl",
@@ -9795,16 +9820,6 @@
           "web_name": "Steur",
           "total_points": 8,
           "points_per_game": 1.6
-        },
-        {
-          "web_name": "Tel",
-          "total_points": 8,
-          "points_per_game": 2
-        },
-        {
-          "web_name": "Fernandes",
-          "total_points": 8,
-          "points_per_game": 1.3
         },
         {
           "web_name": "Kovačić",
@@ -9942,7 +9957,17 @@
           "points_per_game": 0.8
         },
         {
+          "web_name": "Sakamoto",
+          "total_points": 4,
+          "points_per_game": 1.3
+        },
+        {
           "web_name": "Torp",
+          "total_points": 4,
+          "points_per_game": 1
+        },
+        {
+          "web_name": "Hamer",
           "total_points": 4,
           "points_per_game": 1
         },
@@ -9982,11 +10007,6 @@
           "points_per_game": 2
         },
         {
-          "web_name": "Maddison",
-          "total_points": 4,
-          "points_per_game": 1
-        },
-        {
           "web_name": "Fofana",
           "total_points": 4,
           "points_per_game": 1
@@ -10008,11 +10028,6 @@
         },
         {
           "web_name": "Barco",
-          "total_points": 3,
-          "points_per_game": 1
-        },
-        {
-          "web_name": "Hamer",
           "total_points": 3,
           "points_per_game": 1
         },
@@ -10078,11 +10093,6 @@
         },
         {
           "web_name": "O'Riley",
-          "total_points": 2,
-          "points_per_game": 1
-        },
-        {
-          "web_name": "Sakamoto",
           "total_points": 2,
           "points_per_game": 1
         },
@@ -10197,6 +10207,11 @@
           "points_per_game": 0.5
         },
         {
+          "web_name": "Kulusevski",
+          "total_points": 1,
+          "points_per_game": 1
+        },
+        {
           "web_name": "Mudryk",
           "total_points": 1,
           "points_per_game": 1
@@ -10289,6 +10304,11 @@
           "points_per_game": 3
         },
         {
+          "web_name": "Thomas-Asante",
+          "total_points": 19,
+          "points_per_game": 2.7
+        },
+        {
           "web_name": "Thiago",
           "total_points": 18,
           "points_per_game": 2.6
@@ -10304,6 +10324,16 @@
           "points_per_game": 2.6
         },
         {
+          "web_name": "Marmoush",
+          "total_points": 18,
+          "points_per_game": 3
+        },
+        {
+          "web_name": "Solanke",
+          "total_points": 18,
+          "points_per_game": 2.6
+        },
+        {
           "web_name": "Isidor",
           "total_points": 17,
           "points_per_game": 2.8
@@ -10314,19 +10344,9 @@
           "points_per_game": 2.3
         },
         {
-          "web_name": "Thomas-Asante",
-          "total_points": 14,
-          "points_per_game": 2.3
-        },
-        {
-          "web_name": "Solanke",
-          "total_points": 14,
-          "points_per_game": 2.3
-        },
-        {
           "web_name": "Cherif",
-          "total_points": 13,
-          "points_per_game": 6.5
+          "total_points": 14,
+          "points_per_game": 4.7
         },
         {
           "web_name": "Delap",
@@ -10369,11 +10389,6 @@
           "points_per_game": 1.5
         },
         {
-          "web_name": "Marmoush",
-          "total_points": 9,
-          "points_per_game": 1.8
-        },
-        {
           "web_name": "Šeško",
           "total_points": 8,
           "points_per_game": 2
@@ -10414,6 +10429,11 @@
           "points_per_game": 1
         },
         {
+          "web_name": "Awoniyi",
+          "total_points": 4,
+          "points_per_game": 0.8
+        },
+        {
           "web_name": "Muniz",
           "total_points": 4,
           "points_per_game": 0.8
@@ -10435,11 +10455,6 @@
         },
         {
           "web_name": "Wilson",
-          "total_points": 3,
-          "points_per_game": 0.8
-        },
-        {
-          "web_name": "Awoniyi",
           "total_points": 3,
           "points_per_game": 0.8
         },
