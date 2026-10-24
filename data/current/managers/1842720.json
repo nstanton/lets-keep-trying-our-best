@@ -104,6 +104,21 @@
       "event_transfers": 2,
       "event_transfers_cost": 0,
       "points_on_bench": 3
+    },
+    {
+      "event": 8,
+      "points": 2,
+      "total_points": 434,
+      "rank": 2302403,
+      "rank_sort": 2352521,
+      "overall_rank": 3561072,
+      "percentile_rank": 25,
+      "overall_rank_percentage": "32",
+      "bank": 3,
+      "value": 1008,
+      "event_transfers": 2,
+      "event_transfers_cost": 0,
+      "points_on_bench": 0
     }
   ],
   "past": [
@@ -1122,9 +1137,164 @@
         "points": 1,
         "minutes": 90
       }
+    ],
+    "8": [
+      {
+        "element": 1,
+        "position": 1,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0,
+        "minutes": 0
+      },
+      {
+        "element": 175,
+        "position": 2,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0,
+        "minutes": 0
+      },
+      {
+        "element": 305,
+        "position": 3,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 2,
+        "minutes": 90
+      },
+      {
+        "element": 8,
+        "position": 4,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0,
+        "minutes": 0
+      },
+      {
+        "element": 427,
+        "position": 5,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0,
+        "minutes": 0
+      },
+      {
+        "element": 40,
+        "position": 6,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0,
+        "minutes": 0
+      },
+      {
+        "element": 154,
+        "position": 7,
+        "multiplier": 2,
+        "is_captain": true,
+        "is_vice_captain": false,
+        "points": 0,
+        "minutes": 0
+      },
+      {
+        "element": 211,
+        "position": 8,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0,
+        "minutes": 0
+      },
+      {
+        "element": 411,
+        "position": 9,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": true,
+        "points": 0,
+        "minutes": 0
+      },
+      {
+        "element": 165,
+        "position": 10,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0,
+        "minutes": 0
+      },
+      {
+        "element": 464,
+        "position": 11,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0,
+        "minutes": 0
+      },
+      {
+        "element": 497,
+        "position": 12,
+        "multiplier": 0,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0,
+        "minutes": 0
+      },
+      {
+        "element": 544,
+        "position": 13,
+        "multiplier": 0,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0,
+        "minutes": 0
+      },
+      {
+        "element": 115,
+        "position": 14,
+        "multiplier": 0,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0,
+        "minutes": 0
+      },
+      {
+        "element": 112,
+        "position": 15,
+        "multiplier": 0,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 0,
+        "minutes": 0
+      }
     ]
   },
   "transfers": [
+    {
+      "element_in": 427,
+      "element_in_cost": 79,
+      "element_out": 397,
+      "element_out_cost": 83,
+      "entry": 1842720,
+      "event": 8,
+      "time": "2026-10-23T14:42:22.297536Z"
+    },
+    {
+      "element_in": 154,
+      "element_in_cost": 98,
+      "element_out": 12,
+      "element_out_cost": 95,
+      "entry": 1842720,
+      "event": 8,
+      "time": "2026-10-23T14:42:22.295263Z"
+    },
     {
       "element_in": 112,
       "element_in_cost": 49,
