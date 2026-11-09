@@ -137,18 +137,18 @@
     },
     {
       "event": 10,
-      "points": 19,
-      "total_points": 496,
-      "rank": 7922402,
-      "rank_sort": 8105547,
-      "overall_rank": 6726784,
-      "percentile_rank": 75,
-      "overall_rank_percentage": "60",
+      "points": 43,
+      "total_points": 520,
+      "rank": 9076157,
+      "rank_sort": 9199911,
+      "overall_rank": 6912715,
+      "percentile_rank": 85,
+      "overall_rank_percentage": "62",
       "bank": 1,
       "value": 1000,
       "event_transfers": 0,
       "event_transfers_cost": 0,
-      "points_on_bench": 1
+      "points_on_bench": 2
     }
   ],
   "past": [
@@ -1425,8 +1425,8 @@
         "multiplier": 1,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 0,
-        "minutes": 0
+        "points": 6,
+        "minutes": 90
       },
       {
         "element": 388,
@@ -1452,8 +1452,8 @@
         "multiplier": 1,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 0,
-        "minutes": 0
+        "points": 1,
+        "minutes": 90
       },
       {
         "element": 367,
@@ -1461,8 +1461,8 @@
         "multiplier": 1,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 0,
-        "minutes": 0
+        "points": 3,
+        "minutes": 75
       },
       {
         "element": 426,
@@ -1470,8 +1470,8 @@
         "multiplier": 1,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 0,
-        "minutes": 0
+        "points": 10,
+        "minutes": 90
       },
       {
         "element": 40,
@@ -1479,8 +1479,8 @@
         "multiplier": 2,
         "is_captain": true,
         "is_vice_captain": false,
-        "points": 0,
-        "minutes": 0
+        "points": 2,
+        "minutes": 90
       },
       {
         "element": 399,
@@ -1542,8 +1542,8 @@
         "multiplier": 0,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 0,
-        "minutes": 0
+        "points": 1,
+        "minutes": 90
       },
       {
         "element": 175,

@@ -137,18 +137,18 @@
     },
     {
       "event": 10,
-      "points": 26,
-      "total_points": 646,
-      "rank": 4710544,
-      "rank_sort": 4715160,
-      "overall_rank": 252306,
+      "points": 57,
+      "total_points": 677,
+      "rank": 4824745,
+      "rank_sort": 4827873,
+      "overall_rank": 309978,
       "percentile_rank": 45,
-      "overall_rank_percentage": "2",
+      "overall_rank_percentage": "3",
       "bank": 18,
       "value": 1029,
       "event_transfers": 0,
       "event_transfers_cost": 0,
-      "points_on_bench": 6
+      "points_on_bench": 7
     }
   ],
   "past": [
@@ -1479,8 +1479,8 @@
         "multiplier": 1,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 0,
-        "minutes": 0
+        "points": 6,
+        "minutes": 81
       },
       {
         "element": 124,
@@ -1488,8 +1488,8 @@
         "multiplier": 1,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 0,
-        "minutes": 0
+        "points": 10,
+        "minutes": 90
       },
       {
         "element": 154,
@@ -1497,8 +1497,8 @@
         "multiplier": 1,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 0,
-        "minutes": 0
+        "points": 2,
+        "minutes": 90
       },
       {
         "element": 40,
@@ -1506,8 +1506,8 @@
         "multiplier": 1,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 0,
-        "minutes": 0
+        "points": 2,
+        "minutes": 90
       },
       {
         "element": 346,
@@ -1524,8 +1524,8 @@
         "multiplier": 1,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 0,
-        "minutes": 0
+        "points": 11,
+        "minutes": 85
       },
       {
         "element": 411,
@@ -1551,8 +1551,8 @@
         "multiplier": 0,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 0,
-        "minutes": 0
+        "points": 1,
+        "minutes": 90
       },
       {
         "element": 449,
