@@ -55,27 +55,27 @@
         "club_badge_src": null,
         "entry": 1842720,
         "entry_name": "dated vibes",
-        "event_total": 29,
+        "event_total": 30,
         "last_rank": 4,
         "player_name": "Nathan Stanton",
         "rank": 4,
         "rank_sort": 4,
-        "total": 563
+        "total": 564
       },
       {
         "club_badge_src": null,
         "entry": 8747478,
         "entry_name": "10daGavea",
-        "event_total": 31,
+        "event_total": 32,
         "last_rank": 5,
         "player_name": "Davi Parente",
         "rank": 5,
         "rank_sort": 5,
-        "total": 551
+        "total": 552
       }
     ]
   },
-  "last_updated_data": "2026-11-23T16:52:21Z",
+  "last_updated_data": "2026-11-24T16:37:26Z",
   "new_entries": {
     "has_next": false,
     "page": 1,

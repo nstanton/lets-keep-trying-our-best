@@ -152,18 +152,18 @@
     },
     {
       "event": 11,
-      "points": 31,
-      "total_points": 551,
-      "rank": 6048838,
-      "rank_sort": 6273174,
-      "overall_rank": 6932122,
-      "percentile_rank": 55,
+      "points": 32,
+      "total_points": 552,
+      "rank": 6868194,
+      "rank_sort": 7095151,
+      "overall_rank": 7040755,
+      "percentile_rank": 65,
       "overall_rank_percentage": "62",
       "bank": 1,
       "value": 997,
       "event_transfers": 0,
       "event_transfers_cost": 0,
-      "points_on_bench": 2
+      "points_on_bench": 1
     }
   ],
   "past": [
@@ -1608,13 +1608,13 @@
         "minutes": 90
       },
       {
-        "element": 367,
+        "element": 162,
         "position": 5,
         "multiplier": 1,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 0,
-        "minutes": 0
+        "points": 1,
+        "minutes": 3
       },
       {
         "element": 426,
@@ -1653,22 +1653,22 @@
         "minutes": 90
       },
       {
-        "element": 491,
-        "position": 10,
-        "multiplier": 1,
-        "is_captain": false,
-        "is_vice_captain": false,
-        "points": 1,
-        "minutes": 45
-      },
-      {
         "element": 346,
-        "position": 11,
+        "position": 10,
         "multiplier": 1,
         "is_captain": false,
         "is_vice_captain": false,
         "points": 9,
         "minutes": 90
+      },
+      {
+        "element": 491,
+        "position": 11,
+        "multiplier": 1,
+        "is_captain": false,
+        "is_vice_captain": false,
+        "points": 1,
+        "minutes": 45
       },
       {
         "element": 58,
@@ -1680,13 +1680,13 @@
         "minutes": 0
       },
       {
-        "element": 162,
+        "element": 367,
         "position": 13,
         "multiplier": 0,
         "is_captain": false,
         "is_vice_captain": false,
-        "points": 1,
-        "minutes": 3
+        "points": 0,
+        "minutes": 0
       },
       {
         "element": 259,
